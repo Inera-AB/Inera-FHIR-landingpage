@@ -30,11 +30,10 @@ Inera's FHIR standards cover a wide range of national e-health services. Each st
 
 Some profiles are shared across multiple standards. These are gathered in Inera's core profiles and reused in the service-specific IGs. Terminology — code systems, value sets and concept maps — is published separately in a terminology IG.
 
-The table below provides an overview of Inera's FHIR standards, divided into three parts:
+The table below provides an overview of Inera's FHIR standards, divided into two parts:
 
 1. **Inera's FHIR services** — service-specific standards and their business requirements.
-2. **Terminology** — shared terminology used across standards.
-3. **Generic profiles** — profiles reused across multiple standards.
+2. **Generic profiles** — profiles reused across multiple standards.
 
 <br>
 
@@ -60,49 +59,16 @@ The table below provides an overview of Inera's FHIR standards, divided into thr
     <td class="tg-category" colspan="4"><em>Inera's national services</em></td>
   </tr>
   <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/npo/" target="_blank">National Patient Overview (NPÖ)</a></td>
-    <td class="tg-cell">Nationell PatientÖversikt</td>
-    <td class="tg-cell">Enables healthcare staff to access a patient's health information from other care providers across Sweden, regardless of which health record system is used locally.</td>
+    <td class="tg-cell"><a href="https://fhir.inera.se/ig/careteam/" target="_blank">Inera CareTeam</a></td>
+    <td class="tg-cell">Fast vårdkontakt via 1177</td>
+    <td class="tg-cell">Profiles for representing a patient's designated care contact (fast vårdkontakt) and care team. Used as the first FHIR profile in the 1177 Journal service.</td>
     <td class="tg-cell">See IG</td>
   </tr>
   <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/pascal/" target="_blank">Pascal</a></td>
-    <td class="tg-cell">Nationell läkemedelsförteckning</td>
-    <td class="tg-cell">Supports medication management and exchange of medication information between prescribers, pharmacies and other actors in the medication chain.</td>
+    <td class="tg-cell"><a href="https://fhir.inera.se/ig/forms/" target="_blank">Inera FHIR Forms</a></td>
+    <td class="tg-cell">Formulärtjänsten</td>
+    <td class="tg-cell">Profiles for <code>Questionnaire</code> and <code>QuestionnaireResponse</code> supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.</td>
     <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/journalen/" target="_blank">The Journal (Journalen)</a></td>
-    <td class="tg-cell">Journalen via 1177</td>
-    <td class="tg-cell">Gives patients access to their own health record information via 1177 Vårdguiden. The FHIR API enables standardised access to journal data from connected care providers.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/booking/" target="_blank">Booking via 1177</a></td>
-    <td class="tg-cell">Bokning via 1177</td>
-    <td class="tg-cell">Allows patients to book, reschedule and cancel appointments via 1177 Vårdguiden's e-services. Provides a standardised FHIR interface to care providers' scheduling systems.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/remiss/" target="_blank">Referral Management</a></td>
-    <td class="tg-cell">Remisshantering</td>
-    <td class="tg-cell">Supports structured exchange of referral information between referrer and recipient, including responses and status updates.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/provtagning/" target="_blank">Laboratory Orders and Results</a></td>
-    <td class="tg-cell">Provtagning och provsvar</td>
-    <td class="tg-cell">National support for structured exchange of laboratory orders and results between healthcare providers, laboratories and patients.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-category" colspan="4"><em>Terminology</em></td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/terminology/" target="_blank">Inera Terminology</a></td>
-    <td class="tg-cell">Terminologi-IG</td>
-    <td class="tg-cell">Contains CodeSystems, ValueSets and ConceptMaps developed by Inera and used across the national FHIR standards.</td>
-    <td class="tg-cell"></td>
   </tr>
   <tr>
     <td class="tg-category" colspan="4"><em>Generic profiles</em></td>
@@ -111,13 +77,7 @@ The table below provides an overview of Inera's FHIR standards, divided into thr
     <td class="tg-cell"><a href="https://fhir.inera.se/ig/core/" target="_blank">Inera Core</a></td>
     <td class="tg-cell">Kärnprofiler</td>
     <td class="tg-cell">Foundational profiles reused across Inera's FHIR standards, e.g. Patient, Organisation and Practitioner profiles adapted to Swedish requirements (personal identity number, HSA-id, etc.).</td>
-    <td class="tg-cell"></td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/hsa/" target="_blank">HSA</a></td>
-    <td class="tg-cell">HSA-katalogen</td>
-    <td class="tg-cell">Profiles for representing HSA (Hälso- och sjukvårdens Adressregister) identities and organisational units, used to identify practitioners and organisations in national services.</td>
-    <td class="tg-cell"></td>
+    <td class="tg-cell">See IG</td>
   </tr>
 </tbody>
 </table>
