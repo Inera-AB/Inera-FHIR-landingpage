@@ -1,53 +1,71 @@
 /* ============================================================
-   Inera graphic profile — MkDocs Material overrides
-   Primary:   #006633  (Inera green)
-   Secondary: #004d26  (dark green)
-   Light:     #e8f5ee  (pale green tint)
-   Accent:    #00a550  (bright green)
-   Text:      #1a1a1a
+   Inera graphic profile
+
+   Primary (pink):   #A33662  dark #7E2A4C  light #C03F73
+   Secondary (warm): #E7DAC5  #F3EDE2  #F9F6F1
+   Complement green: #305A47  #40775E  #AFD4C4
+   Neutral:          #353636  #727373  #CCCCCC  #F0F0F0
+   Fonts:            Open Sans (body), Poppins (headings)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
 
 :root {
-  --md-primary-fg-color:        #006633;
-  --md-primary-fg-color--light: #00a550;
-  --md-primary-fg-color--dark:  #004d26;
-  --md-accent-fg-color:         #00a550;
-  --md-accent-fg-color--transparent: #00a55019;
-  --md-typeset-a-color:         #006633;
-  --inera-green:                #006633;
-  --inera-green-dark:           #004d26;
-  --inera-green-light:          #e8f5ee;
-  --inera-green-mid:            #8ab8a0;
-  --inera-green-bright:         #00a550;
+  --md-primary-fg-color:        #A33662;
+  --md-primary-fg-color--light: #C03F73;
+  --md-primary-fg-color--dark:  #7E2A4C;
+  --md-accent-fg-color:         #C03F73;
+  --md-accent-fg-color--transparent: #C03F7319;
+  --md-typeset-a-color:         #7E2A4C;
+
+  --inera-pink:         #A33662;
+  --inera-pink-dark:    #7E2A4C;
+  --inera-pink-light:   #C03F73;
+  --inera-warm-1:       #E7DAC5;
+  --inera-warm-2:       #F3EDE2;
+  --inera-warm-3:       #F9F6F1;
+  --inera-green-dark:   #305A47;
+  --inera-green-mid:    #40775E;
+  --inera-green-light:  #AFD4C4;
+  --inera-text:         #353636;
+  --inera-text-mid:     #727373;
+  --inera-border:       #CCCCCC;
+  --inera-bg-light:     #F0F0F0;
 }
 
 /* ---- Typography ---- */
 body,
 .md-typeset {
-  font-family: 'Source Sans Pro', 'Open Sans', Arial, sans-serif;
-  color: #1a1a1a;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--inera-text);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
 }
 
 /* ---- Header ---- */
 .md-header {
-  background-color: var(--inera-green);
-  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  background-color: var(--inera-pink);
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
 }
 
 .md-header__title {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  letter-spacing: 0.3px;
 }
 
 /* ---- Navigation tabs ---- */
 .md-tabs {
-  background-color: var(--inera-green-dark);
+  background-color: var(--inera-pink-dark);
 }
 
 .md-tabs__link {
   color: rgba(255,255,255,.8);
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
 
@@ -59,56 +77,65 @@ body,
 /* ---- Sidebar / TOC ---- */
 .md-nav__link--active,
 .md-nav__link:hover {
-  color: var(--inera-green);
+  color: var(--inera-pink);
 }
 
 /* ---- Links ---- */
 .md-typeset a {
-  color: var(--inera-green);
+  color: var(--inera-pink-dark);
   text-decoration: none;
 }
 
 .md-typeset a:hover {
-  color: var(--inera-green-dark);
+  color: var(--inera-pink);
   text-decoration: underline;
 }
 
 /* ---- Headings ---- */
 .md-typeset h1 {
-  color: var(--inera-green-dark);
+  color: var(--inera-pink-dark);
   font-weight: 700;
-  border-bottom: 3px solid var(--inera-green);
+  border-bottom: 3px solid var(--inera-pink);
   padding-bottom: .3em;
 }
 
 .md-typeset h2 {
-  color: var(--inera-green);
+  color: var(--inera-pink);
   font-weight: 700;
 }
 
 .md-typeset h3 {
-  color: var(--inera-green-dark);
+  color: var(--inera-pink-dark);
   font-weight: 600;
 }
 
-/* ---- Admonition / callout boxes ---- */
+/* ---- Page background ---- */
+.md-main {
+  background-color: var(--inera-warm-3);
+}
+
+.md-content {
+  background-color: #ffffff;
+}
+
+/* ---- Admonitions ---- */
 .md-typeset .admonition,
 .md-typeset details {
-  border-left-color: var(--inera-green);
+  border-left-color: var(--inera-pink);
 }
 
 .md-typeset .admonition-title,
 .md-typeset summary {
-  background-color: var(--inera-green-light);
+  background-color: #f9edf3;
 }
 
 /* ---- Footer ---- */
 .md-footer {
-  background-color: var(--inera-green-dark);
+  background-color: var(--inera-pink-dark);
 }
 
 .md-footer-meta {
-  background-color: #003d1f;
+  background-color: #5e1f38;
 }
 
 /* ---- Search ---- */
@@ -116,15 +143,15 @@ body,
   background-color: rgba(255,255,255,.15);
 }
 
-/* ---- Logo sizing in header ---- */
+/* ---- Logo in header ---- */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 36px;
+  height: 32px;
   width: auto;
 }
 
 /* ============================================================
-   Inera overview table (used in index.md)
+   Overview table (index.md)
    ============================================================ */
 .tg {
   border-collapse: collapse;
@@ -133,18 +160,19 @@ body,
 }
 
 .tg td {
-  border: 1px solid #c8ddd3;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  border: 1px solid var(--inera-border);
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
   overflow: hidden;
   padding: 10px 10px;
   word-break: normal;
   vertical-align: top;
+  background-color: #ffffff;
 }
 
 .tg th {
-  border: 1px solid #c8ddd3;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  border: 1px solid var(--inera-border);
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   overflow: hidden;
@@ -154,32 +182,38 @@ body,
 }
 
 .tg .tg-header {
-  background-color: var(--inera-green);
+  background-color: var(--inera-pink);
   color: #ffffff;
   text-align: left;
 }
 
 .tg .tg-category {
-  background-color: var(--inera-green-mid);
-  color: #1a1a1a;
+  background-color: var(--inera-warm-1);
+  color: var(--inera-text);
   font-style: italic;
 }
 
 .tg .tg-cell {
-  background-color: #ffffff;
-  color: #1a1a1a;
-}
-
-.tg .tg-cell:nth-child(odd) {
-  /* alternating handled by category rows instead */
+  color: var(--inera-text);
 }
 
 .tg a {
-  color: var(--inera-green);
+  color: var(--inera-pink-dark);
   font-weight: 600;
 }
 
 .tg a:hover {
-  color: var(--inera-green-dark);
+  color: var(--inera-pink);
   text-decoration: underline;
+}
+
+/* ---- Standard MkDocs tables ---- */
+.md-typeset table:not([class]) th {
+  background-color: var(--inera-pink);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: var(--inera-warm-3);
 }
