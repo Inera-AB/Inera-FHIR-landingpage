@@ -9,7 +9,8 @@ repo_url: https://github.com/Inera-AB/Inera-FHIR-landingpage
 theme:
   name: material
   language: en
-  favicon: assets/images/inera-favicon.png
+  logo: assets/images/inera-logo.svg
+  favicon: assets/images/inera-favicon.svg
   palette:
     - scheme: default
       primary: custom
