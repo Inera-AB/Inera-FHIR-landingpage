@@ -33,26 +33,14 @@ Some profiles are shared across multiple standards. These are gathered in Inera'
 The table below provides an overview of Inera's FHIR standards, divided into three parts:
 
 1. **Inera's FHIR services** — service-specific standards and their business requirements.
-2. **Terminology** — shared terminology used across standards.
+2. **Terminology** — Inera's national terminology server.
 3. **Generic profiles** — profiles reused across multiple standards.
 
 <br>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0; width:100%;}
-.tg td{border-color:#ccc;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 8px;word-break:normal;}
-.tg th{border-color:#ccc;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:bold;overflow:hidden;padding:10px 8px;word-break:normal;}
-.tg .tg-header{background-color:#006633;color:#ffffff;text-align:left;vertical-align:top;}
-.tg .tg-category{background-color:#8ab8a0;color:#1a1a1a;font-style:italic;text-align:left;vertical-align:top;}
-.tg .tg-cell{border-color:#ccc;text-align:left;vertical-align:top;}
-.tg a{color:#006633;}
-</style>
-
 <div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
-<caption style="color:#006633;font-weight:bold;text-align:left;padding-bottom:6px;">Table 1: Overview of Inera's FHIR standards</caption>
+<caption style="color:#7E2A4C;font-weight:bold;text-align:left;padding-bottom:6px;">Table 1: Overview of Inera's FHIR standards</caption>
 <colgroup>
 <col style="width:20%">
 <col style="width:20%">
@@ -72,58 +60,34 @@ The table below provides an overview of Inera's FHIR standards, divided into thr
     <td class="tg-category" colspan="4"><em>Inera's national services</em></td>
   </tr>
   <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-npo" target="_blank">National Patient Overview (NPÖ)</a></td>
-    <td class="tg-cell">Nationell PatientÖversikt</td>
-    <td class="tg-cell">Enables healthcare staff to access a patient's health information from other care providers across Sweden, regardless of which health record system is used locally.</td>
+    <td class="tg-cell"><a href="https://fhir.inera.se/ig/careteam/" target="_blank">Inera CareTeam</a></td>
+    <td class="tg-cell">Fast vårdkontakt via 1177</td>
+    <td class="tg-cell">Profiles for representing a patient's designated care contact (fast vårdkontakt) and care team. Used as the first FHIR profile in the 1177 Journal service.</td>
     <td class="tg-cell">See IG</td>
   </tr>
   <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-pascal" target="_blank">Pascal</a></td>
-    <td class="tg-cell">Nationell läkemedelsförteckning</td>
-    <td class="tg-cell">Supports medication management and exchange of medication information between prescribers, pharmacies and other actors in the medication chain.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-journalen" target="_blank">The Journal (Journalen)</a></td>
-    <td class="tg-cell">Journalen via 1177</td>
-    <td class="tg-cell">Gives patients access to their own health record information via 1177 Vårdguiden. The FHIR API enables standardised access to journal data from connected care providers.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-booking" target="_blank">Booking via 1177</a></td>
-    <td class="tg-cell">Bokning via 1177</td>
-    <td class="tg-cell">Allows patients to book, reschedule and cancel appointments via 1177 Vårdguiden's e-services. Provides a standardised FHIR interface to care providers' scheduling systems.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-remiss" target="_blank">Referral Management</a></td>
-    <td class="tg-cell">Remisshantering</td>
-    <td class="tg-cell">Supports structured exchange of referral information between referrer and recipient, including responses and status updates.</td>
-    <td class="tg-cell">See IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-provtagning" target="_blank">Laboratory Orders and Results</a></td>
-    <td class="tg-cell">Provtagning och provsvar</td>
-    <td class="tg-cell">National support for structured exchange of laboratory orders and results between healthcare providers, laboratories and patients.</td>
+    <td class="tg-cell"><a href="https://fhir.inera.se/ig/forms/" target="_blank">Inera FHIR Forms</a></td>
+    <td class="tg-cell">Formulärtjänsten</td>
+    <td class="tg-cell">Profiles for <code>Questionnaire</code> and <code>QuestionnaireResponse</code> supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.</td>
     <td class="tg-cell">See IG</td>
   </tr>
   <tr>
     <td class="tg-category" colspan="4"><em>Terminology</em></td>
   </tr>
   <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-terminology" target="_blank">Inera Terminology</a></td>
-    <td class="tg-cell">Terminologi-IG</td>
-    <td class="tg-cell">Contains CodeSystems, ValueSets and ConceptMaps developed by Inera and used across the national FHIR standards.</td>
+    <td class="tg-cell"><a href="https://test.api.terminologitjansten.inera.se" target="_blank">Inera Terminologitjänst</a></td>
+    <td class="tg-cell">Terminologitjänsten</td>
+    <td class="tg-cell">Inera's national terminology server providing CodeSystems, ValueSets and concept lookups used across Swedish healthcare. Exposes a FHIR Terminology API.</td>
     <td class="tg-cell"></td>
   </tr>
   <tr>
     <td class="tg-category" colspan="4"><em>Generic profiles</em></td>
   </tr>
   <tr>
-    <td class="tg-cell"><a href="https://simplifier.net/inera-core" target="_blank">Inera Core</a></td>
+    <td class="tg-cell"><a href="https://fhir.inera.se/ig/core/" target="_blank">Inera Core</a></td>
     <td class="tg-cell">Kärnprofiler</td>
     <td class="tg-cell">Foundational profiles reused across Inera's FHIR standards, e.g. Patient, Organisation and Practitioner profiles adapted to Swedish requirements (personal identity number, HSA-id, etc.).</td>
-    <td class="tg-cell"></td>
+    <td class="tg-cell">See IG</td>
   </tr>
 </tbody>
 </table>
@@ -141,7 +105,7 @@ When implementing an Inera FHIR standard it is important to understand both the 
 
 Each Inera FHIR standard is delivered with documentation that describes how the standard should be used and what requirements apply. The documentation may consist of:
 
-- **Implementation Guide (IG):** The technical specifications for the standard, published on Simplifier.net.
+- **Implementation Guide (IG):** The technical specifications for the standard, published at [fhir.inera.se](https://fhir.inera.se).
 - **Clinical guidelines:** Background and clinical rationale behind the standard.
 - **Use cases:** Descriptions of the intended scenarios for the standard.
 - **Test protocol:** Used during test and verification to document that the implementation fulfils the standard.
@@ -162,7 +126,7 @@ The governance describes how Inera manages the lifecycle of its FHIR standards �
 Before an implementation is put into production and starts exchanging patient information, it must be verified against Inera's test environments. Inera provides:
 
 - **Test environments (QA/Staging):** Separate environments for integration and system testing.
-- **Validators:** Ability to validate FHIR resources against published profiles via Simplifier.net or local validators.
+- **Validators:** Ability to validate FHIR resources against published profiles using the [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) with the relevant Inera IG loaded from [fhir.inera.se](https://fhir.inera.se).
 - **Conformance testing:** Inera can offer support for conformance testing against published CapabilityStatements.
 
 Contact Inera Customer Service or the responsible service manager to start the testing process for a specific service.
