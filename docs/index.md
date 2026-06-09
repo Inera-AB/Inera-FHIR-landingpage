@@ -28,7 +28,15 @@ The purpose of this site is to guide you to the right documentation and technica
 
 Inera's FHIR standards cover a wide range of national e-health services. Each standard is described in an Implementation Guide (IG) containing profiles, extensions, terminology and rules for how information shall be structured and exchanged.
 
-Some profiles are shared across multiple standards. These are gathered in Inera's core profiles and reused in the service-specific IGs. Terminology — code systems, value sets and concept maps — is published separately in a terminology IG.
+All Inera FHIR Implementation Guides are published at **[fhir.inera.se](https://fhir.inera.se)**. Each IG follows a predictable URL pattern based on its name:
+
+```
+https://fhir.inera.se/ig/<name>/
+```
+
+For example: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
+
+Some profiles are shared across multiple standards. These are gathered in Inera's core profiles and reused in the service-specific IGs. Terminology — code systems, value sets and concept maps — is provided by Inera's national terminology server.
 
 The table below provides an overview of Inera's FHIR standards, divided into three parts:
 
@@ -105,7 +113,7 @@ When implementing an Inera FHIR standard it is important to understand both the 
 
 Each Inera FHIR standard is delivered with documentation that describes how the standard should be used and what requirements apply. The documentation may consist of:
 
-- **Implementation Guide (IG):** The technical specifications for the standard, published at [fhir.inera.se](https://fhir.inera.se).
+- **Implementation Guide (IG):** The technical specifications for the standard, published at [fhir.inera.se/ig/\<name\>/](https://fhir.inera.se).
 - **Clinical guidelines:** Background and clinical rationale behind the standard.
 - **Use cases:** Descriptions of the intended scenarios for the standard.
 - **Test protocol:** Used during test and verification to document that the implementation fulfils the standard.
