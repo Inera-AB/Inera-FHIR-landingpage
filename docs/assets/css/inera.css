@@ -1,0 +1,41 @@
+:root {
+  --md-primary-fg-color: #006633;
+  --md-primary-fg-color--light: #008844;
+  --md-primary-fg-color--dark: #004d26;
+  --md-accent-fg-color: #006633;
+}
+
+.md-header {
+  background-color: #006633;
+}
+
+/* Table styling matching Inera design */
+.inera-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.inera-table td,
+.inera-table th {
+  border: 1px solid #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 8px;
+}
+
+.inera-table .header-row {
+  background-color: #006633;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.inera-table .category-row {
+  background-color: #8ab8a0;
+  color: #333333;
+  font-style: italic;
+}
+
+.inera-table a {
+  color: #006633;
+}

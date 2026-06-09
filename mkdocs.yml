@@ -1,0 +1,38 @@
+site_name: Inera's FHIR Standards
+site_url: https://inera-ab.github.io/Inera-FHIR-landingpage/
+site_description: Landing page for Inera's FHIR standards and implementation guides
+site_author: Inera AB
+
+repo_name: Inera-AB/Inera-FHIR-landingpage
+repo_url: https://github.com/Inera-AB/Inera-FHIR-landingpage
+
+theme:
+  name: material
+  language: en
+  favicon: assets/images/inera-favicon.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - content.tooltips
+
+extra_css:
+  - assets/css/inera.css
+
+nav:
+  - Home: index.md
+  - New to FHIR?: assets/documents/NewToFHIR.md
+  - FAQ: assets/documents/FAQ.md
+  - Governance: assets/documents/Governance.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
