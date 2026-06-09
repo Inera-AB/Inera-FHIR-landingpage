@@ -23,9 +23,47 @@ FHIR is designed to be:
 | **ValueSet / CodeSystem** | Defines the coded values (terminology) that can be used in a given field. |
 | **CapabilityStatement** | Describes what a FHIR server or client supports — which resources, interactions and search parameters. |
 
+## How Inera authors Implementation Guides
+
+Inera authors FHIR Implementation Guides using **FHIR Shorthand (FSH)** and the **FHIR IG Publisher**. This toolchain is the HL7-recommended way to produce IGs and is used by national programmes worldwide.
+
+### FHIR Shorthand (FSH)
+
+[FHIR Shorthand](https://build.fhir.org/ig/HL7/fhir-shorthand/) is a domain-specific language designed specifically for defining FHIR profiles, extensions, value sets and examples. It is compact and human-readable, making it much easier to author and review than raw JSON or XML StructureDefinitions.
+
+A simple FSH profile looks like this:
+
+```fsh
+Profile: IneraPatient
+Parent: Patient
+Id: inera-patient
+Title: "Inera Patient"
+Description: "Patient profile adapted for Swedish national services."
+
+* identifier 1..* MS
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+```
+
+**Learn FSH at [FSH School](https://fshschool.org)** — an interactive online course that walks you through the FSH language from basics to advanced profiling, with live exercises directly in the browser.
+
+### IG Publisher and IG Builder
+
+The **FHIR IG Publisher** is the official HL7 tool that takes FSH source files and produces a complete, publishable Implementation Guide website — including rendered profiles, examples, validation, and a navigable HTML site.
+
+The **[IG Builder guidance](https://build.fhir.org/ig/FHIR/ig-guidance/)** on build.fhir.org covers everything you need to know about setting up and running an IG project:
+
+- Project folder structure and `sushi-config.yaml`
+- Running SUSHI (the FSH compiler) and the IG Publisher
+- Configuring pages, menus and narrative content
+- Publishing and CI/CD pipelines
+
+The continuous integration server at [build.fhir.org](https://build.fhir.org) automatically builds every IG hosted on GitHub and makes a live preview available — Inera uses this for pre-release review of IGs before they are formally published.
+
 ## How to read an Implementation Guide
 
-An Inera Implementation Guide is published on [Simplifier.net](https://simplifier.net) and is structured as follows:
+An Inera Implementation Guide is structured as follows:
 
 1. **Introduction** — describes the purpose and scope of the standard.
 2. **Profiles** — lists the FHIR resource profiles defined in the IG, with constraints and cardinalities.
@@ -39,7 +77,10 @@ An Inera Implementation Guide is published on [Simplifier.net](https://simplifie
 ## Useful external resources
 
 - [HL7 FHIR R4 specification](https://hl7.org/fhir/R4/)
-- [Simplifier.net](https://simplifier.net) — profile registry where Inera publishes its IGs
+- [FSH School](https://fshschool.org) — interactive course for learning FHIR Shorthand
+- [IG Builder guidance](https://build.fhir.org/ig/FHIR/ig-guidance/) — official guide to authoring and publishing FHIR IGs
+- [FHIR Shorthand specification](https://build.fhir.org/ig/HL7/fhir-shorthand/) — full FSH language reference
+- [build.fhir.org](https://build.fhir.org) — continuous build server for FHIR IGs
 - [FHIR for beginners (HL7)](https://www.hl7.org/fhir/overview.html)
 - [HL7 Sweden](https://hl7.se) — Swedish FHIR community and base profiles
 

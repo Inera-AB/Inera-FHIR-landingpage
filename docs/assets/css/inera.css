@@ -1,41 +1,185 @@
+/* ============================================================
+   Inera graphic profile — MkDocs Material overrides
+   Primary:   #006633  (Inera green)
+   Secondary: #004d26  (dark green)
+   Light:     #e8f5ee  (pale green tint)
+   Accent:    #00a550  (bright green)
+   Text:      #1a1a1a
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 :root {
-  --md-primary-fg-color: #006633;
-  --md-primary-fg-color--light: #008844;
-  --md-primary-fg-color--dark: #004d26;
-  --md-accent-fg-color: #006633;
+  --md-primary-fg-color:        #006633;
+  --md-primary-fg-color--light: #00a550;
+  --md-primary-fg-color--dark:  #004d26;
+  --md-accent-fg-color:         #00a550;
+  --md-accent-fg-color--transparent: #00a55019;
+  --md-typeset-a-color:         #006633;
+  --inera-green:                #006633;
+  --inera-green-dark:           #004d26;
+  --inera-green-light:          #e8f5ee;
+  --inera-green-mid:            #8ab8a0;
+  --inera-green-bright:         #00a550;
 }
 
+/* ---- Typography ---- */
+body,
+.md-typeset {
+  font-family: 'Source Sans Pro', 'Open Sans', Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+/* ---- Header ---- */
 .md-header {
-  background-color: #006633;
+  background-color: var(--inera-green);
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
 }
 
-/* Table styling matching Inera design */
-.inera-table {
+.md-header__title {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* ---- Navigation tabs ---- */
+.md-tabs {
+  background-color: var(--inera-green-dark);
+}
+
+.md-tabs__link {
+  color: rgba(255,255,255,.8);
+  font-weight: 600;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #ffffff;
+}
+
+/* ---- Sidebar / TOC ---- */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--inera-green);
+}
+
+/* ---- Links ---- */
+.md-typeset a {
+  color: var(--inera-green);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: var(--inera-green-dark);
+  text-decoration: underline;
+}
+
+/* ---- Headings ---- */
+.md-typeset h1 {
+  color: var(--inera-green-dark);
+  font-weight: 700;
+  border-bottom: 3px solid var(--inera-green);
+  padding-bottom: .3em;
+}
+
+.md-typeset h2 {
+  color: var(--inera-green);
+  font-weight: 700;
+}
+
+.md-typeset h3 {
+  color: var(--inera-green-dark);
+  font-weight: 600;
+}
+
+/* ---- Admonition / callout boxes ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: var(--inera-green);
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background-color: var(--inera-green-light);
+}
+
+/* ---- Footer ---- */
+.md-footer {
+  background-color: var(--inera-green-dark);
+}
+
+.md-footer-meta {
+  background-color: #003d1f;
+}
+
+/* ---- Search ---- */
+.md-search__form {
+  background-color: rgba(255,255,255,.15);
+}
+
+/* ---- Logo sizing in header ---- */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 36px;
+  width: auto;
+}
+
+/* ============================================================
+   Inera overview table (used in index.md)
+   ============================================================ */
+.tg {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
 }
 
-.inera-table td,
-.inera-table th {
-  border: 1px solid #000;
-  font-family: Arial, sans-serif;
+.tg td {
+  border: 1px solid #c8ddd3;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
-  padding: 10px 8px;
+  overflow: hidden;
+  padding: 10px 10px;
+  word-break: normal;
+  vertical-align: top;
 }
 
-.inera-table .header-row {
-  background-color: #006633;
+.tg th {
+  border: 1px solid #c8ddd3;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 10px 10px;
+  word-break: normal;
+  vertical-align: top;
+}
+
+.tg .tg-header {
+  background-color: var(--inera-green);
   color: #ffffff;
-  font-weight: bold;
+  text-align: left;
 }
 
-.inera-table .category-row {
-  background-color: #8ab8a0;
-  color: #333333;
+.tg .tg-category {
+  background-color: var(--inera-green-mid);
+  color: #1a1a1a;
   font-style: italic;
 }
 
-.inera-table a {
-  color: #006633;
+.tg .tg-cell {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.tg .tg-cell:nth-child(odd) {
+  /* alternating handled by category rows instead */
+}
+
+.tg a {
+  color: var(--inera-green);
+  font-weight: 600;
+}
+
+.tg a:hover {
+  color: var(--inera-green-dark);
+  text-decoration: underline;
 }
