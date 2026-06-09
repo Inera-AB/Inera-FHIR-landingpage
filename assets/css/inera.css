@@ -1,0 +1,219 @@
+/* ============================================================
+   Inera graphic profile
+
+   Primary (pink):   #A33662  dark #7E2A4C  light #C03F73
+   Secondary (warm): #E7DAC5  #F3EDE2  #F9F6F1
+   Complement green: #305A47  #40775E  #AFD4C4
+   Neutral:          #353636  #727373  #CCCCCC  #F0F0F0
+   Fonts:            Open Sans (body), Poppins (headings)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  --md-primary-fg-color:        #A33662;
+  --md-primary-fg-color--light: #C03F73;
+  --md-primary-fg-color--dark:  #7E2A4C;
+  --md-accent-fg-color:         #C03F73;
+  --md-accent-fg-color--transparent: #C03F7319;
+  --md-typeset-a-color:         #7E2A4C;
+
+  --inera-pink:         #A33662;
+  --inera-pink-dark:    #7E2A4C;
+  --inera-pink-light:   #C03F73;
+  --inera-warm-1:       #E7DAC5;
+  --inera-warm-2:       #F3EDE2;
+  --inera-warm-3:       #F9F6F1;
+  --inera-green-dark:   #305A47;
+  --inera-green-mid:    #40775E;
+  --inera-green-light:  #AFD4C4;
+  --inera-text:         #353636;
+  --inera-text-mid:     #727373;
+  --inera-border:       #CCCCCC;
+  --inera-bg-light:     #F0F0F0;
+}
+
+/* ---- Typography ---- */
+body,
+.md-typeset {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--inera-text);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+}
+
+/* ---- Header ---- */
+.md-header {
+  background-color: var(--inera-pink);
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.md-header__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* ---- Navigation tabs ---- */
+.md-tabs {
+  background-color: var(--inera-pink-dark);
+}
+
+.md-tabs__link {
+  color: rgba(255,255,255,.8);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #ffffff;
+}
+
+/* ---- Sidebar / TOC ---- */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--inera-pink);
+}
+
+/* ---- Links ---- */
+.md-typeset a {
+  color: var(--inera-pink-dark);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: var(--inera-pink);
+  text-decoration: underline;
+}
+
+/* ---- Headings ---- */
+.md-typeset h1 {
+  color: var(--inera-pink-dark);
+  font-weight: 700;
+  border-bottom: 3px solid var(--inera-pink);
+  padding-bottom: .3em;
+}
+
+.md-typeset h2 {
+  color: var(--inera-pink);
+  font-weight: 700;
+}
+
+.md-typeset h3 {
+  color: var(--inera-pink-dark);
+  font-weight: 600;
+}
+
+/* ---- Page background ---- */
+.md-main {
+  background-color: var(--inera-warm-3);
+}
+
+.md-content {
+  background-color: #ffffff;
+}
+
+/* ---- Admonitions ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: var(--inera-pink);
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background-color: #f9edf3;
+}
+
+/* ---- Footer ---- */
+.md-footer {
+  background-color: var(--inera-pink-dark);
+}
+
+.md-footer-meta {
+  background-color: #5e1f38;
+}
+
+/* ---- Search ---- */
+.md-search__form {
+  background-color: rgba(255,255,255,.15);
+}
+
+/* ---- Logo in header ---- */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 32px;
+  width: auto;
+}
+
+/* ============================================================
+   Overview table (index.md)
+   ============================================================ */
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.tg td {
+  border: 1px solid var(--inera-border);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 10px;
+  word-break: normal;
+  vertical-align: top;
+  background-color: #ffffff;
+}
+
+.tg th {
+  border: 1px solid var(--inera-border);
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 10px 10px;
+  word-break: normal;
+  vertical-align: top;
+}
+
+.tg .tg-header {
+  background-color: var(--inera-pink);
+  color: #ffffff;
+  text-align: left;
+}
+
+.tg .tg-category {
+  background-color: var(--inera-warm-1);
+  color: var(--inera-text);
+  font-style: italic;
+}
+
+.tg .tg-cell {
+  color: var(--inera-text);
+}
+
+.tg a {
+  color: var(--inera-pink-dark);
+  font-weight: 600;
+}
+
+.tg a:hover {
+  color: var(--inera-pink);
+  text-decoration: underline;
+}
+
+/* ---- Standard MkDocs tables ---- */
+.md-typeset table:not([class]) th {
+  background-color: var(--inera-pink);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: var(--inera-warm-3);
+}
