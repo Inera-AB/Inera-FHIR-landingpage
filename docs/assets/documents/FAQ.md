@@ -8,7 +8,7 @@ Inera manages the national digital infrastructure for Swedish healthcare and is 
 
 **Where are Inera's Implementation Guides published?**
 
-All Inera FHIR Implementation Guides are published on [Simplifier.net](https://simplifier.net) under the Inera organisation. Source code and issue tracking are available on [GitHub](https://github.com/Inera-AB).
+All Inera FHIR Implementation Guides are published at [fhir.inera.se](https://fhir.inera.se). Each IG is available at `https://fhir.inera.se/ig/<name>/`, for example [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/) and [fhir.inera.se/ig/hsa/](https://fhir.inera.se/ig/hsa/). Source code and issue tracking are available on [GitHub](https://github.com/Inera-AB).
 
 ---
 
@@ -24,14 +24,11 @@ No. Each IG's CapabilityStatement specifies which profiles and interactions are 
 
 **Where can I find example FHIR resources?**
 
-Example resources are included in each Implementation Guide on Simplifier.net. They can be downloaded as JSON or XML and used as a starting point for your implementation.
+Example resources are included in each Implementation Guide at [fhir.inera.se](https://fhir.inera.se). They can be downloaded as JSON or XML and used as a starting point for your implementation.
 
 **Can I validate my FHIR resources against Inera's profiles?**
 
-Yes. You can validate resources using:
-
-- The [Simplifier.net validator](https://simplifier.net/validate) — select the relevant Inera profile.
-- The official [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) with the Inera IG loaded.
+Yes. You can validate resources using the official [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) with the relevant Inera IG loaded from [fhir.inera.se](https://fhir.inera.se).
 
 ---
 

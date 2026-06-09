@@ -63,7 +63,7 @@ The continuous integration server at [build.fhir.org](https://build.fhir.org) au
 
 ## How to read an Implementation Guide
 
-An Inera Implementation Guide is structured as follows:
+Inera's Implementation Guides are published at [fhir.inera.se](https://fhir.inera.se) — for example [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/). Each IG is structured as follows:
 
 1. **Introduction** — describes the purpose and scope of the standard.
 2. **Profiles** — lists the FHIR resource profiles defined in the IG, with constraints and cardinalities.
@@ -76,6 +76,7 @@ An Inera Implementation Guide is structured as follows:
 
 ## Useful external resources
 
+- [Inera FHIR standards](https://fhir.inera.se) — all Inera IGs
 - [HL7 FHIR R4 specification](https://hl7.org/fhir/R4/)
 - [FSH School](https://fshschool.org) — interactive course for learning FHIR Shorthand
 - [IG Builder guidance](https://build.fhir.org/ig/FHIR/ig-guidance/) — official guide to authoring and publishing FHIR IGs
