@@ -30,10 +30,11 @@ Inera's FHIR standards cover a wide range of national e-health services. Each st
 
 Some profiles are shared across multiple standards. These are gathered in Inera's core profiles and reused in the service-specific IGs. Terminology — code systems, value sets and concept maps — is published separately in a terminology IG.
 
-The table below provides an overview of Inera's FHIR standards, divided into two parts:
+The table below provides an overview of Inera's FHIR standards, divided into three parts:
 
 1. **Inera's FHIR services** — service-specific standards and their business requirements.
-2. **Generic profiles** — profiles reused across multiple standards.
+2. **Terminology** — Inera's national terminology server.
+3. **Generic profiles** — profiles reused across multiple standards.
 
 <br>
 
@@ -69,6 +70,15 @@ The table below provides an overview of Inera's FHIR standards, divided into two
     <td class="tg-cell">Formulärtjänsten</td>
     <td class="tg-cell">Profiles for <code>Questionnaire</code> and <code>QuestionnaireResponse</code> supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.</td>
     <td class="tg-cell">See IG</td>
+  </tr>
+  <tr>
+    <td class="tg-category" colspan="4"><em>Terminology</em></td>
+  </tr>
+  <tr>
+    <td class="tg-cell"><a href="https://test.api.terminologitjansten.inera.se" target="_blank">Inera Terminologitjänst</a></td>
+    <td class="tg-cell">Terminologitjänsten</td>
+    <td class="tg-cell">Inera's national terminology server providing CodeSystems, ValueSets and concept lookups used across Swedish healthcare. Exposes a FHIR Terminology API.</td>
+    <td class="tg-cell"></td>
   </tr>
   <tr>
     <td class="tg-category" colspan="4"><em>Generic profiles</em></td>
