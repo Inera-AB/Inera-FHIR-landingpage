@@ -31,6 +31,58 @@
   --inera-text-mid:     #727373;
   --inera-border:       #CCCCCC;
   --inera-bg-light:     #F0F0F0;
+
+  /* WCAG focus ring */
+  --inera-focus-outline: 3px solid #005fcc;
+  --inera-focus-offset:  2px;
+}
+
+/* ============================================================
+   WCAG: Skip navigation link
+   ============================================================ */
+.md-skip-nav {
+  position: absolute;
+  top: -60px;
+  left: 8px;
+  z-index: 9999;
+  padding: 10px 16px;
+  background: #1a1a1a;
+  color: #ffffff !important;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 0 0 4px 4px;
+  transition: top 0.15s ease;
+}
+
+.md-skip-nav:focus {
+  top: 0;
+  outline: var(--inera-focus-outline);
+  outline-offset: 0;
+}
+
+/* ============================================================
+   WCAG: Visible focus indicators for all interactive elements
+   ============================================================ */
+:focus-visible {
+  outline: var(--inera-focus-outline);
+  outline-offset: var(--inera-focus-offset);
+  border-radius: 2px;
+}
+
+/* Remove default focus for mouse users but keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.md-nav__link:focus-visible,
+.md-tabs__link:focus-visible,
+.md-header__button:focus-visible,
+.md-search__input:focus-visible {
+  outline: var(--inera-focus-outline);
+  outline-offset: var(--inera-focus-offset);
+  border-radius: 2px;
 }
 
 /* ---- Typography ---- */
@@ -63,15 +115,21 @@ body,
   background-color: var(--inera-pink-dark);
 }
 
+/* WCAG: Use solid white (not translucent) for sufficient contrast against dark background */
 .md-tabs__link {
-  color: rgba(255,255,255,.8);
+  color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  /* WCAG 2.5.5: minimum touch target */
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .md-tabs__link--active,
 .md-tabs__link:hover {
   color: #ffffff;
+  text-decoration: underline;
 }
 
 /* ---- Sidebar / TOC ---- */
@@ -80,15 +138,19 @@ body,
   color: var(--inera-pink);
 }
 
-/* ---- Links ---- */
+/* ---- Links: WCAG 1.4.1 — always show underline so color alone is not relied on ---- */
 .md-typeset a {
   color: var(--inera-pink-dark);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .md-typeset a:hover {
   color: var(--inera-pink);
   text-decoration: underline;
+}
+
+.md-typeset a:visited {
+  color: #5a1e35;
 }
 
 /* ---- Headings ---- */
@@ -138,9 +200,39 @@ body,
   background-color: #5e1f38;
 }
 
+/* WCAG: footer links must be visible */
+.md-footer a,
+.md-footer-meta a {
+  color: #ffd4e8;
+  text-decoration: underline;
+}
+
+.md-footer a:hover,
+.md-footer-meta a:hover {
+  color: #ffffff;
+}
+
 /* ---- Search ---- */
+/* WCAG: improve contrast of placeholder text in search */
 .md-search__form {
-  background-color: rgba(255,255,255,.15);
+  background-color: rgba(255,255,255,.25);
+}
+
+.md-search__input::placeholder {
+  color: rgba(255,255,255,.85);
+}
+
+/* ---- Language switcher ---- */
+.md-header__option .md-select__inner,
+.md-select {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* WCAG: ensure language link has sufficient size */
+.md-header__option {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ---- Logo in header ---- */
@@ -197,9 +289,11 @@ body,
   color: var(--inera-text);
 }
 
+/* WCAG: table links must be underlined */
 .tg a {
   color: var(--inera-pink-dark);
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .tg a:hover {
@@ -216,4 +310,33 @@ body,
 
 .md-typeset table:not([class]) tr:nth-child(even) td {
   background-color: var(--inera-warm-3);
+}
+
+/* ============================================================
+   WCAG: Reduced motion support
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .md-skip-nav {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   WCAG: High contrast mode support
+   ============================================================ */
+@media (forced-colors: active) {
+  .md-skip-nav {
+    forced-color-adjust: none;
+    background: ButtonText;
+    color: ButtonFace;
+  }
 }

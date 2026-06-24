@@ -11,6 +11,7 @@ theme:
   language: en
   logo: assets/images/inera-logo.svg
   favicon: assets/images/inera-thumbnail.png
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: custom
@@ -20,6 +21,30 @@ theme:
     - navigation.top
     - toc.integrate
     - content.tooltips
+
+plugins:
+  - search:
+      lang:
+        - en
+        - sv
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: "🇬🇧 English"
+          build: true
+        - locale: sv
+          name: "🇸🇪 Svenska"
+          build: true
+          nav_translations:
+            Home: Hem
+            "New to FHIR?": "Ny på FHIR?"
+            FAQ: Vanliga frågor
+            Governance: Styrning
 
 extra_css:
   - assets/css/inera.css
