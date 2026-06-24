@@ -57,10 +57,10 @@ The table below provides an overview of Inera's FHIR standards, divided into thr
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-header">Service</th>
-    <th class="tg-header">Swedish name</th>
-    <th class="tg-header">Short description</th>
-    <th class="tg-header">Version</th>
+    <th class="tg-header" scope="col">Service</th>
+    <th class="tg-header" scope="col">Swedish name</th>
+    <th class="tg-header" scope="col">Short description</th>
+    <th class="tg-header" scope="col">Version</th>
   </tr>
 </thead>
 <tbody>
