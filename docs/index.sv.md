@@ -36,70 +36,21 @@ https://fhir.inera.se/ig/<namn>/
 
 Till exempel: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
 
-Vissa profiler delas mellan flera standarder. Dessa samlas i Ineras kärnprofiler och återanvänds i tjänstespecifika IG:er. Terminologi — kodsystem, värdemängder och begreppskartor — tillhandahålls av Ineras nationella terminologiserver.
+### Publicerade Implementation Guides
 
-Tabellen nedan ger en översikt över Ineras FHIR-standarder, indelade i tre delar:
+En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Publicerade IG:er inkluderar för närvarande:
 
-1. **Ineras FHIR-tjänster** — tjänstespecifika standarder och deras verksamhetskrav.
-2. **Terminologi** — Ineras nationella terminologiserver.
-3. **Generiska profiler** — profiler som återanvänds i flera standarder.
+- **[Inera CareTeam](https://fhir.inera.se/ig/careteam/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
+- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** — Profiler för `Questionnaire` och `QuestionnaireResponse` som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.
 
-<br>
+### Terminologitjänsten
 
-<div style="overflow-x:auto;">
-<table class="tg" id="Tab1">
-<caption style="color:#7E2A4C;font-weight:bold;text-align:left;padding-bottom:6px;">Tabell 1: Översikt över Ineras FHIR-standarder</caption>
-<colgroup>
-<col style="width:20%">
-<col style="width:20%">
-<col style="width:50%">
-<col style="width:10%">
-</colgroup>
-<thead>
-  <tr>
-    <th class="tg-header" scope="col">Tjänst</th>
-    <th class="tg-header" scope="col">Svenskt namn</th>
-    <th class="tg-header" scope="col">Kort beskrivning</th>
-    <th class="tg-header" scope="col">Version</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-category" colspan="4"><em>Ineras nationella tjänster</em></td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/careteam/" target="_blank">Inera CareTeam</a></td>
-    <td class="tg-cell">Fast vårdkontakt via 1177</td>
-    <td class="tg-cell">Profiler för att representera en patients utsedda vårdkontakt (fast vårdkontakt) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.</td>
-    <td class="tg-cell">Se IG</td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/forms/" target="_blank">Inera FHIR Forms</a></td>
-    <td class="tg-cell">Formulärtjänsten</td>
-    <td class="tg-cell">Profiler för <code>Questionnaire</code> och <code>QuestionnaireResponse</code> som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.</td>
-    <td class="tg-cell">Se IG</td>
-  </tr>
-  <tr>
-    <td class="tg-category" colspan="4"><em>Terminologi</em></td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://test.api.terminologitjansten.inera.se" target="_blank">Inera Terminologitjänst</a></td>
-    <td class="tg-cell">Terminologitjänsten</td>
-    <td class="tg-cell">Ineras nationella terminologiserver som tillhandahåller kodsystem, värdemängder och begreppsslagningar för svensk hälso- och sjukvård. Exponerar ett FHIR Terminology API.</td>
-    <td class="tg-cell"></td>
-  </tr>
-  <tr>
-    <td class="tg-category" colspan="4"><em>Generiska profiler</em></td>
-  </tr>
-  <tr>
-    <td class="tg-cell"><a href="https://fhir.inera.se/ig/core/" target="_blank">Inera Core</a></td>
-    <td class="tg-cell">Kärnprofiler</td>
-    <td class="tg-cell">Grundläggande profiler som återanvänds i Ineras FHIR-standarder, t.ex. Patient-, Organisations- och Utövarprofiler anpassade till svenska krav (personnummer, HSA-id, etc.).</td>
-    <td class="tg-cell">Se IG</td>
-  </tr>
-</tbody>
-</table>
-</div>
+**[Inera Terminologitjänst](https://test.api.terminologitjansten.inera.se)** är Ineras nationella terminologiserver som tillhandahåller kodsystem, värdemängder och begreppsslagningar för svensk hälso- och sjukvård. Den exponerar ett FHIR Terminology API.
+
+### Verktyg och stöd
+
+- **Inera Core** *(kommer snart)* — Grundläggande profiler som återanvänds i Ineras FHIR-standarder, t.ex. Patient-, Organisations- och Utövarprofiler anpassade till svenska krav (personnummer, HSA-id, etc.).
+- **[IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate)** — Ett GitHub-mallarkiv för att skapa nya Inera FHIR Implementation Guides, med förkonfigurerad verktygskedja, CI/CD och Ineras varumärkesstil.
 
 <br><br>
 
