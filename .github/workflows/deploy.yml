@@ -1,4 +1,4 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs to fhir-portal
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   deploy:
@@ -18,6 +18,20 @@ jobs:
         with:
           python-version: '3.x'
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - run: mkdocs gh-deploy --force
+      - name: Build site
+        run: mkdocs build
+
+      - name: Deploy to fhir-portal
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          cd site
+          git init
+          git add .
+          git commit -m "Deploy from inera-fhir-landingpage@${GITHUB_SHA::7}"
+          git push --force \
+            "https://x-access-token:${{ secrets.FHIR_PORTAL_TOKEN }}@github.com/inera-ab/fhir-portal.git" \
+            HEAD:gh-pages
