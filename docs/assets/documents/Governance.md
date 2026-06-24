@@ -1,65 +1,65 @@
-# Governance of Inera's FHIR Standards
+# Styrning av Ineras FHIR-standarder
 
-This page describes the general governance for Inera's FHIR standards — how they are developed, maintained, versioned and retired.
+Den här sidan beskriver den generella styrningen för Ineras FHIR-standarder — hur de utvecklas, förvaltas, versionshanteras och avvecklas.
 
-## Governance principles
+## Styrningsprinciper
 
-Inera's FHIR standards are governed according to the following principles:
+Ineras FHIR-standarder styrs enligt följande principer:
 
-- **Transparency** — all standards and their change history are publicly available on GitHub and Simplifier.net.
-- **Collaboration** — requirements are gathered in collaboration with regions, municipalities, system vendors and clinical stakeholders.
-- **Stability** — breaking changes are minimised and communicated well in advance.
-- **Interoperability** — Inera's profiles build on national base profiles from [HL7 Sweden](https://hl7.se) and international standards from HL7 International.
+- **Transparens** — alla standarder och deras ändringshistorik är offentligt tillgängliga på GitHub och Simplifier.net.
+- **Samverkan** — krav samlas in i samarbete med regioner, kommuner, systemleverantörer och kliniska intressenter.
+- **Stabilitet** — brytande ändringar minimeras och kommuniceras i god tid.
+- **Interoperabilitet** — Ineras profiler bygger på nationella basprofiler från [HL7 Sweden](https://hl7.se) och internationella standarder från HL7 International.
 
-## Lifecycle of a FHIR standard
+## Livscykel för en FHIR-standard
 
 ```
-Requirement → Design → Review → Publish (pre-release) → Pilot → Publish (release) → Maintenance → Retirement
+Krav → Design → Granskning → Publicering (förhandsversion) → Pilot → Publicering (release) → Förvaltning → Avveckling
 ```
 
-| Phase | Description |
-|-------|-------------|
-| **Requirement** | Business requirements are gathered from stakeholders and analysed. |
-| **Design** | FHIR profiles, extensions and terminology are designed in collaboration with clinical and technical experts. |
-| **Review** | Draft IG is reviewed by stakeholders and system vendors. Feedback is incorporated. |
-| **Pre-release** | The IG is published as a pre-release (e.g. `1.0.0-beta.1`) for pilot implementations. Not for production use. |
-| **Pilot** | Selected organisations implement and test the standard in a controlled environment. |
-| **Release** | The IG is published as a stable release and approved for production use. |
-| **Maintenance** | Ongoing bug fixes (patch versions) and minor improvements (minor versions). |
-| **Retirement** | The standard is deprecated and eventually retired, with a migration path to a successor standard. |
+| Fas | Beskrivning |
+|-----|-------------|
+| **Krav** | Verksamhetskrav samlas in från intressenter och analyseras. |
+| **Design** | FHIR-profiler, tillägg och terminologi utformas i samarbete med kliniska och tekniska experter. |
+| **Granskning** | Utkast till IG granskas av intressenter och systemleverantörer. Återkoppling bearbetas. |
+| **Förhandsversion** | IG:en publiceras som förhandsversion (t.ex. `1.0.0-beta.1`) för pilotimplementeringar. Ej för produktionsanvändning. |
+| **Pilot** | Utvalda organisationer implementerar och testar standarden i en kontrollerad miljö. |
+| **Release** | IG:en publiceras som stabil release och godkänns för produktionsanvändning. |
+| **Förvaltning** | Löpande buggfixar (patch-versioner) och mindre förbättringar (minor-versioner). |
+| **Avveckling** | Standarden fasas ut och avvecklas så småningom, med en migrationsväg till en efterföljande standard. |
 
-## Versioning
+## Versionshantering
 
-Inera's FHIR standards use [semantic versioning (SemVer 2.0)](https://semver.org/):
+Ineras FHIR-standarder använder [semantisk versionshantering (SemVer 2.0)](https://semver.org/):
 
-- `MAJOR.MINOR.PATCH` — e.g. `2.1.4`
-- Pre-releases use a suffix — e.g. `2.0.0-beta.1`
+- `MAJOR.MINOR.PATCH` — t.ex. `2.1.4`
+- Förhandsversioner använder ett suffix — t.ex. `2.0.0-beta.1`
 
-| Version part | When it changes |
-|---|---|
-| **MAJOR** | Incompatible changes — existing implementations need to be updated. |
-| **MINOR** | New features added in a backward-compatible way. |
-| **PATCH** | Backward-compatible bug fixes. |
+| Versionsdel | När den ändras |
+|-------------|----------------|
+| **MAJOR** | Inkompatibla ändringar — befintliga implementeringar behöver uppdateras. |
+| **MINOR** | Nya funktioner tillagda på ett bakåtkompatibelt sätt. |
+| **PATCH** | Bakåtkompatibla buggfixar. |
 
-Major and minor version decisions are made in consultation with the relevant governance groups and documented in release notes.
+Beslut om major- och minorversioner fattas i samråd med relevanta styrningsgrupper och dokumenteras i versionsnyheter.
 
-## Roles and responsibilities
+## Roller och ansvar
 
-| Role | Responsibility |
-|------|---------------|
-| **Inera FHIR team** | Designs and maintains FHIR profiles and IGs. |
-| **Service manager** | Owns the business requirements for a specific service. |
-| **Stakeholder group** | Regions, municipalities and clinical experts who participate in requirements gathering and review. |
-| **System vendors** | Implement the standards and provide feedback from a technical implementation perspective. |
+| Roll | Ansvar |
+|------|--------|
+| **Ineras FHIR-team** | Utformar och förvaltar FHIR-profiler och IG:er. |
+| **Tjänsteförvaltare** | Äger verksamhetskraven för en specifik tjänst. |
+| **Intressentgrupp** | Regioner, kommuner och kliniska experter som deltar i kravinhämtning och granskning. |
+| **Systemleverantörer** | Implementerar standarderna och ger återkoppling från ett tekniskt implementeringsperspektiv. |
 
-## Change request process
+## Ändringshanteringsprocess
 
-1. A change request is submitted as a GitHub issue or by email to [fhir@inera.se](mailto:fhir@inera.se).
-2. Inera assesses the impact and urgency of the request.
-3. The request is prioritised and scheduled for a future version.
-4. The change is implemented, reviewed and published as part of a new version.
-5. The requester is notified and the change is documented in the release notes.
+1. Ett ändringsönskemål skickas in som ett GitHub-ärende eller via e-post till [fhir@inera.se](mailto:fhir@inera.se).
+2. Inera bedömer ärendets konsekvenser och angelägenhetsgrad.
+3. Ärendet prioriteras och schemaläggs för en kommande version.
+4. Ändringen implementeras, granskas och publiceras som en del av en ny version.
+5. Den som lämnat in ärendet meddelas och ändringen dokumenteras i versionsnyheter.
 
-## Questions?
+## Frågor?
 
-Contact the Inera FHIR team at [fhir@inera.se](mailto:fhir@inera.se).
+Kontakta Ineras FHIR-team på [fhir@inera.se](mailto:fhir@inera.se).

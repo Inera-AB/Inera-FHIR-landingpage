@@ -1,150 +1,150 @@
-# Welcome to Inera's FHIR® Standards
+# Välkommen till Ineras FHIR®-standarder
 
-**Table of contents**
+**Innehållsförteckning**
 
-* [1 Inera's FHIR standards](#1-ineras-fhir-standards)
-* [2 Implementing an Inera FHIR standard](#2-implementing-an-inera-fhir-standard)
-    * [2.1 Standard documentation](#21-standard-documentation)
-    * [2.2 General governance for Inera FHIR standards](#22-general-governance-for-inera-fhir-standards)
-* [3 Test and verification](#3-test-and-verification)
-* [4 Change management and versioning](#4-change-management-and-versioning)
-    * [4.1 Versioning of Inera FHIR standards](#41-versioning-of-inera-fhir-standards)
-    * [4.2 Change requests and improvements](#42-change-requests-and-improvements)
-* [5 Want to stay updated?](#5-want-to-stay-updated)
-* [6 New to FHIR?](#6-new-to-fhir)
-* [7 Frequently asked questions](#7-frequently-asked-questions)
-
----
-
-Inera manages and develops national digital infrastructure for Swedish healthcare. As part of this work, Inera publishes FHIR-based Implementation Guides (IGs) that enable standardised and interoperable information exchange between healthcare systems and actors across Sweden.
-
-The purpose of this site is to guide you to the right documentation and technical specifications for Inera's FHIR standards.
-
-> **Note:** Technical documentation is published in English. Clinical guidelines and governance documents are published in Swedish.
+* [1 Ineras FHIR-standarder](#1-ineras-fhir-standarder)
+* [2 Implementera en Inera FHIR-standard](#2-implementera-en-inera-fhir-standard)
+    * [2.1 Standarddokumentation](#21-standarddokumentation)
+    * [2.2 Generell styrning för Inera FHIR-standarder](#22-generell-styrning-for-inera-fhir-standarder)
+* [3 Test och verifiering](#3-test-och-verifiering)
+* [4 Ändringshantering och versionshantering](#4-andringshantering-och-versionshantering)
+    * [4.1 Versionshantering av Inera FHIR-standarder](#41-versionshantering-av-inera-fhir-standarder)
+    * [4.2 Ändringsönskemål och förbättringar](#42-andringsonskemal-och-forbattringar)
+* [5 Vill du hålla dig uppdaterad?](#5-vill-du-halla-dig-uppdaterad)
+* [6 Ny på FHIR?](#6-ny-pa-fhir)
+* [7 Vanliga frågor](#7-vanliga-fragor)
 
 ---
 
-## 1 Inera's FHIR standards
+Inera förvaltar och utvecklar nationell digital infrastruktur för svensk hälso- och sjukvård. Som en del av detta arbete publicerar Inera FHIR-baserade Implementation Guides (IG:er) som möjliggör standardiserat och interoperabelt informationsutbyte mellan vårdsystem och aktörer i Sverige.
 
-Inera's FHIR standards cover a wide range of national e-health services. Each standard is described in an Implementation Guide (IG) containing profiles, extensions, terminology and rules for how information shall be structured and exchanged.
+Syftet med denna webbplats är att vägleda dig till rätt dokumentation och tekniska specifikationer för Ineras FHIR-standarder.
 
-All Inera FHIR Implementation Guides are published at **[fhir.inera.se](https://fhir.inera.se)**. Each IG follows a predictable URL pattern based on its name:
+> **Notera:** Teknisk dokumentation publiceras på engelska. Kliniska riktlinjer och styrdokument publiceras på svenska.
+
+---
+
+## 1 Ineras FHIR-standarder
+
+Ineras FHIR-standarder täcker ett brett spektrum av nationella e-hälsotjänster. Varje standard beskrivs i en Implementation Guide (IG) som innehåller profiler, tillägg, terminologi och regler för hur information ska struktureras och utbytas.
+
+Alla Inera FHIR Implementation Guides publiceras på **[fhir.inera.se](https://fhir.inera.se)**. Varje IG följer ett förutsägbart URL-mönster baserat på sitt namn:
 
 ```
-https://fhir.inera.se/ig/<name>/
+https://fhir.inera.se/ig/<namn>/
 ```
 
-For example: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
+Till exempel: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
 
-### Published Implementation Guides
+### Publicerade Implementation Guides
 
-A complete and up-to-date listing of all published Inera FHIR Implementation Guides is available at **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Currently published IGs include:
+En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Publicerade IG:er inkluderar för närvarande:
 
-- **[Inera CareTeam](https://fhir.inera.se/ig/careteam/)** — Profiles for representing a patient's designated care contact (*fast vårdkontakt*) and care team. Used as the first FHIR profile in the 1177 Journal service.
-- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** — Profiles for `Questionnaire` and `QuestionnaireResponse` supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.
+- **[Inera CareTeam](https://fhir.inera.se/ig/careteam/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
+- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** — Profiler för `Questionnaire` och `QuestionnaireResponse` som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.
 
-### Terminology Service
+### Terminologitjänsten
 
-**[Inera Terminologitjänst](https://test.api.terminologitjansten.inera.se)** (*Terminologitjänsten*) is Inera's national terminology server providing CodeSystems, ValueSets and concept lookups used across Swedish healthcare. It exposes a FHIR Terminology API.
+**[Inera Terminologitjänst](https://test.api.terminologitjansten.inera.se)** är Ineras nationella terminologiserver som tillhandahåller kodsystem, värdemängder och begreppsslagningar för svensk hälso- och sjukvård. Den exponerar ett FHIR Terminology API.
 
-### Tools and Support
+### Verktyg och stöd
 
-- **Inera Core** *(coming soon)* — Foundational profiles reused across Inera's FHIR standards, e.g. Patient, Organisation and Practitioner profiles adapted to Swedish requirements (personal identity number, HSA-id, etc.).
-- **[IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate)** — A GitHub template repository for creating new Inera FHIR Implementation Guides, with pre-configured toolchain, CI/CD and Inera branding.
+- **Inera Core** *(kommer snart)* — Grundläggande profiler som återanvänds i Ineras FHIR-standarder, t.ex. Patient-, Organisations- och Utövarprofiler anpassade till svenska krav (personnummer, HSA-id, etc.).
+- **[IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate)** — Ett GitHub-mallarkiv för att skapa nya Inera FHIR Implementation Guides, med förkonfigurerad verktygskedja, CI/CD och Ineras varumärkesstil.
 
 <br><br>
 
-## 2 Implementing an Inera FHIR standard
+## 2 Implementera en Inera FHIR-standard
 
-When implementing an Inera FHIR standard it is important to understand both the business context and the technical specifications. The sections below describe the key components of the standard documentation and the governance that governs how information exchange shall be carried out.
-
-<br>
-
-### 2.1 Standard documentation
-
-Each Inera FHIR standard is delivered with documentation that describes how the standard should be used and what requirements apply. The documentation may consist of:
-
-- **Implementation Guide (IG):** The technical specifications for the standard, published at [fhir.inera.se/ig/\<name\>/](https://fhir.inera.se).
-- **Clinical guidelines:** Background and clinical rationale behind the standard.
-- **Use cases:** Descriptions of the intended scenarios for the standard.
-- **Test protocol:** Used during test and verification to document that the implementation fulfils the standard.
-- **Conformance resources:** FHIR CapabilityStatements and OperationDefinitions describing what a server or client must support.
+Vid implementering av en Inera FHIR-standard är det viktigt att förstå både verksamhetssammanhanget och de tekniska specifikationerna. Avsnitten nedan beskriver standarddokumentationens huvudkomponenter och den styrning som reglerar hur informationsutbyte ska genomföras.
 
 <br>
 
-### 2.2 General governance for Inera FHIR standards
+### 2.1 Standarddokumentation
 
-The governance describes how Inera manages the lifecycle of its FHIR standards — from requirements gathering and publication to change management and decommissioning. It is important to understand the governance process before starting an implementation.
+Varje Inera FHIR-standard levereras med dokumentation som beskriver hur standarden ska användas och vilka krav som gäller. Dokumentationen kan bestå av:
 
-[Click here for more information about governance of Inera's FHIR standards.](assets/documents/Governance.md)
-
-<br>
-
-## 3 Test and verification
-
-Before an implementation is put into production and starts exchanging patient information, it must be verified against Inera's test environments. Inera provides:
-
-- **Test environments (QA/Staging):** Separate environments for integration and system testing.
-- **Validators:** Ability to validate FHIR resources against published profiles using the [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) with the relevant Inera IG loaded from [fhir.inera.se](https://fhir.inera.se).
-- **Conformance testing:** Inera can offer support for conformance testing against published CapabilityStatements.
-
-Contact Inera Customer Service or the responsible service manager to start the testing process for a specific service.
-
-> Contact: [kundservice@inera.se](mailto:kundservice@inera.se)
+- **Implementation Guide (IG):** De tekniska specifikationerna för standarden, publicerade på [fhir.inera.se/ig/\<namn\>/](https://fhir.inera.se).
+- **Kliniska riktlinjer:** Bakgrund och klinisk motivering bakom standarden.
+- **Användningsfall:** Beskrivningar av de avsedda scenarierna för standarden.
+- **Testprotokoll:** Används vid test och verifiering för att dokumentera att implementeringen uppfyller standarden.
+- **Konformansresurser:** FHIR CapabilityStatements och OperationDefinitions som beskriver vad en server eller klient måste stödja.
 
 <br>
 
-## 4 Change management and versioning
+### 2.2 Generell styrning för Inera FHIR-standarder
 
-### 4.1 Versioning of Inera FHIR standards
+Styrningen beskriver hur Inera hanterar livscykeln för sina FHIR-standarder — från kravinhämtning och publicering till ändringshantering och avveckling. Det är viktigt att förstå styrningsprocessen innan en implementering påbörjas.
 
-Inera's FHIR standards follow [semantic versioning (SemVer 2.0)](https://semver.org/), adapted to Inera's governance process. A version identifier consists of three numbers separated by dots, e.g. **2.1.4**, representing *major.minor.patch*:
-
-- **MAJOR** — changed when making incompatible changes to the API or profiling.
-- **MINOR** — changed when adding new functionality in a backward-compatible manner.
-- **PATCH** — changed when making backward-compatible bug fixes.
-
-A version with a suffix such as `2.1.0-beta.1` is a pre-release and is not intended for production use.
-
-Major version changes (major and minor) are decided in consultation with relevant governance groups and communicated via Inera's website and GitHub.
+[Klicka här för mer information om styrning av Ineras FHIR-standarder.](assets/documents/Governance.md)
 
 <br>
 
-### 4.2 Change requests and improvements
+## 3 Test och verifiering
 
-System vendors and healthcare organisations are welcome to submit requests for changes or improvements:
+Innan en implementering sätts i produktion och börjar utbyta patientinformation måste den verifieras mot Ineras testmiljöer. Inera tillhandahåller:
 
-- **Technical questions about an IG:** Create an issue in the relevant [Inera GitHub repository](https://github.com/Inera-AB).
-- **Business questions or other documentation:** Contact the responsible service manager or write to [fhir@inera.se](mailto:fhir@inera.se).
+- **Testmiljöer (QA/Staging):** Separata miljöer för integrations- och systemtestning.
+- **Validerare:** Möjlighet att validera FHIR-resurser mot publicerade profiler med [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) med relevant Inera IG inläst från [fhir.inera.se](https://fhir.inera.se).
+- **Konformanstest:** Inera kan erbjuda stöd för konformanstest mot publicerade CapabilityStatements.
 
-Inera performs an impact assessment of incoming requests and decides whether and when changes should be implemented and which version level is affected.
+Kontakta Ineras kundtjänst eller ansvarig tjänsteförvaltare för att påbörja testprocessen för en specifik tjänst.
 
-<br>
-
-## 5 Want to stay updated?
-
-You can subscribe to updates from Inera's FHIR repositories on GitHub:
-
-1. Go to [Inera AB on GitHub](https://github.com/Inera-AB).
-2. Choose the repository you want to follow.
-3. Click the **Watch** button in the upper right corner and select your preferred notification option.
-
-> You need a GitHub account to watch a repository. Create a free account at [github.com/signup](https://github.com/signup).
-
-You can also follow [inera.se](https://www.inera.se) for news about service development and FHIR standards.
+> Kontakt: [kundservice@inera.se](mailto:kundservice@inera.se)
 
 <br>
 
-## 6 New to FHIR?
+## 4 Ändringshantering och versionshantering
 
-This section provides a brief introduction to FHIR for those who are new to it or have limited experience with the standard. You will find an overview of the most commonly used terms, a step-by-step guide to how an Implementation Guide is structured, and links to external resources for further learning.
+### 4.1 Versionshantering av Inera FHIR-standarder
 
-[Click here for an introduction to FHIR and how to read an Implementation Guide.](assets/documents/NewToFHIR.md)
+Ineras FHIR-standarder följer [semantisk versionshantering (SemVer 2.0)](https://semver.org/), anpassad till Ineras styrningsprocess. En versionsidentifierare består av tre siffror separerade med punkter, t.ex. **2.1.4**, som representerar *major.minor.patch*:
+
+- **MAJOR** — ändras vid inkompatibla ändringar av API:et eller profileringen.
+- **MINOR** — ändras vid tillägg av ny funktionalitet på ett bakåtkompatibelt sätt.
+- **PATCH** — ändras vid bakåtkompatibla buggfixar.
+
+En version med ett suffix som `2.1.0-beta.1` är en förhandsversion och är inte avsedd för produktionsanvändning.
+
+Beslut om stora versionsändringar (major och minor) fattas i samråd med relevanta styrningsgrupper och kommuniceras via Ineras webbplats och GitHub.
 
 <br>
 
-## 7 Frequently asked questions
+### 4.2 Ändringsönskemål och förbättringar
 
-Here you will find answers to the most common questions about Inera's FHIR work and how to get started.
+Systemleverantörer och vårdorganisationer är välkomna att skicka in ändringsönskemål:
 
-[Click here to read frequently asked questions.](assets/documents/FAQ.md)
+- **Tekniska frågor om en IG:** Skapa ett ärende i relevant [Inera GitHub-arkiv](https://github.com/Inera-AB).
+- **Verksamhetsfrågor eller annan dokumentation:** Kontakta ansvarig tjänsteförvaltare eller skriv till [fhir@inera.se](mailto:fhir@inera.se).
+
+Inera genomför en konsekvensanalys av inkomna ärenden och beslutar om och när ändringar ska implementeras samt vilken versionsnivå som berörs.
+
+<br>
+
+## 5 Vill du hålla dig uppdaterad?
+
+Du kan prenumerera på uppdateringar från Ineras FHIR-arkiv på GitHub:
+
+1. Gå till [Inera AB på GitHub](https://github.com/Inera-AB).
+2. Välj det arkiv du vill följa.
+3. Klicka på knappen **Watch** i det övre högra hörnet och välj önskat aviseringsalternativ.
+
+> Du behöver ett GitHub-konto för att bevaka ett arkiv. Skapa ett kostnadsfritt konto på [github.com/signup](https://github.com/signup).
+
+Du kan även följa [inera.se](https://www.inera.se) för nyheter om tjänsteutveckling och FHIR-standarder.
+
+<br>
+
+## 6 Ny på FHIR?
+
+Det här avsnittet ger en kort introduktion till FHIR för dig som är ny inom området eller har begränsad erfarenhet av standarden. Här finns en översikt av de vanligaste termerna, en steg-för-steg-guide till hur en Implementation Guide är strukturerad samt länkar till externa resurser för vidare lärande.
+
+[Klicka här för en introduktion till FHIR och hur man läser en Implementation Guide.](assets/documents/NewToFHIR.md)
+
+<br>
+
+## 7 Vanliga frågor
+
+Här hittar du svar på de vanligaste frågorna om Ineras FHIR-arbete och hur du kommer igång.
+
+[Klicka här för att läsa vanliga frågor.](assets/documents/FAQ.md)

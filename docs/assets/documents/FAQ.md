@@ -1,76 +1,76 @@
-# Frequently Asked Questions
+# Vanliga frågor
 
-## General
+## Allmänt
 
-**What is Inera's role in FHIR standardisation?**
+**Vilken roll har Inera i FHIR-standardiseringsarbetet?**
 
-Inera manages the national digital infrastructure for Swedish healthcare and is responsible for defining how FHIR should be used within the national services it operates. Inera's FHIR Implementation Guides define profiles adapted to Swedish requirements — such as the use of the personal identity number (personnummer) and HSA-id — and are built on top of the base profiles from [HL7 Sweden](https://hl7.se).
+Inera förvaltar den nationella digitala infrastrukturen för svensk hälso- och sjukvård och ansvarar för att definiera hur FHIR ska användas inom de nationella tjänster som Inera driver. Ineras FHIR Implementation Guides definierar profiler anpassade till svenska krav — exempelvis användningen av personnummer och HSA-id — och bygger på basprofiler från [HL7 Sweden](https://hl7.se).
 
-**Where are Inera's Implementation Guides published?**
+**Var publiceras Ineras Implementation Guides?**
 
-All Inera FHIR Implementation Guides are published at [fhir.inera.se](https://fhir.inera.se) following the URL pattern `https://fhir.inera.se/ig/<name>/`. For example:
+Alla Inera FHIR Implementation Guides publiceras på [fhir.inera.se](https://fhir.inera.se) enligt URL-mönstret `https://fhir.inera.se/ig/<namn>/`. Till exempel:
 
 - [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/)
 - [fhir.inera.se/ig/careteam/](https://fhir.inera.se/ig/careteam/)
 - [fhir.inera.se/ig/forms/](https://fhir.inera.se/ig/forms/)
 
-Source code and issue tracking are available on [GitHub](https://github.com/Inera-AB).
+Källkod och ärendehantering finns på [GitHub](https://github.com/Inera-AB).
 
 ---
 
-## Implementation
+## Implementering
 
-**What version of FHIR do Inera's standards use?**
+**Vilken version av FHIR använder Ineras standarder?**
 
-Inera's current standards target **FHIR R4** (version 4.0.1).
+Ineras nuvarande standarder riktar sig mot **FHIR R4** (version 4.0.1).
 
-**Do I need to implement all profiles in an IG?**
+**Måste jag implementera alla profiler i en IG?**
 
-No. Each IG's CapabilityStatement specifies which profiles and interactions are required (SHALL) versus recommended (SHOULD) or optional (MAY) for a given actor (client or server). Start by reading the CapabilityStatement for your role.
+Nej. Varje IG:s CapabilityStatement specificerar vilka profiler och interaktioner som är obligatoriska (SHALL) respektive rekommenderade (SHOULD) eller frivilliga (MAY) för en given aktör (klient eller server). Börja med att läsa CapabilityStatement för din roll.
 
-**Where can I find example FHIR resources?**
+**Var hittar jag exempelresurser för FHIR?**
 
-Example resources are included in each Implementation Guide at [fhir.inera.se](https://fhir.inera.se). They can be downloaded as JSON or XML and used as a starting point for your implementation.
+Exempelresurser finns i varje Implementation Guide på [fhir.inera.se](https://fhir.inera.se). De kan laddas ner som JSON eller XML och användas som utgångspunkt för din implementering.
 
-**Can I validate my FHIR resources against Inera's profiles?**
+**Kan jag validera mina FHIR-resurser mot Ineras profiler?**
 
-Yes. You can validate resources using the official [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) with the relevant Inera IG loaded from [fhir.inera.se](https://fhir.inera.se).
-
----
-
-## Testing
-
-**How do I get access to Inera's test environments?**
-
-Contact Inera Customer Service at [kundservice@inera.se](mailto:kundservice@inera.se) or the responsible service manager for the specific service. Access to test environments typically requires a signed agreement.
-
-**Is there a sandbox or open test environment?**
-
-Inera currently provides test environments for connected system vendors. Please refer to the documentation for the specific service you are implementing to find out what test infrastructure is available.
+Ja. Du kan validera resurser med den officiella [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) med relevant Inera IG inläst från [fhir.inera.se](https://fhir.inera.se).
 
 ---
 
-## Change management
+## Testning
 
-**How are changes to Inera's FHIR standards communicated?**
+**Hur får jag tillgång till Ineras testmiljöer?**
 
-Changes are communicated through:
+Kontakta Ineras kundtjänst på [kundservice@inera.se](mailto:kundservice@inera.se) eller ansvarig tjänsteförvaltare för den aktuella tjänsten. Tillgång till testmiljöer kräver vanligtvis ett tecknat avtal.
 
-- Release notes in the Implementation Guide.
-- GitHub releases and issues in the relevant repository.
-- Inera's website and newsletters.
+**Finns det en sandbox eller öppen testmiljö?**
 
-**How do I report a bug or suggest an improvement?**
-
-- For technical issues with an IG: create an issue in the relevant [Inera GitHub repository](https://github.com/Inera-AB).
-- For other questions: write to [fhir@inera.se](mailto:fhir@inera.se).
+Inera tillhandahåller för närvarande testmiljöer för anslutna systemleverantörer. Se dokumentationen för den specifika tjänst du implementerar för att ta reda på vilken testinfrastruktur som finns tillgänglig.
 
 ---
 
-## Contact
+## Ändringshantering
 
-| Topic | Contact |
-|-------|---------|
-| Technical FHIR questions | [fhir@inera.se](mailto:fhir@inera.se) |
-| Customer service | [kundservice@inera.se](mailto:kundservice@inera.se) |
-| General information | [inera.se](https://www.inera.se) |
+**Hur kommuniceras ändringar i Ineras FHIR-standarder?**
+
+Ändringar kommuniceras via:
+
+- Versionsnyheter i Implementation Guide:en.
+- GitHub-releaser och ärenden i relevant arkiv.
+- Ineras webbplats och nyhetsbrev.
+
+**Hur rapporterar jag en bugg eller föreslår en förbättring?**
+
+- För tekniska problem med en IG: skapa ett ärende i relevant [Inera GitHub-arkiv](https://github.com/Inera-AB).
+- För övriga frågor: skriv till [fhir@inera.se](mailto:fhir@inera.se).
+
+---
+
+## Kontakt
+
+| Ämne | Kontakt |
+|------|---------|
+| Tekniska FHIR-frågor | [fhir@inera.se](mailto:fhir@inera.se) |
+| Kundtjänst | [kundservice@inera.se](mailto:kundservice@inera.se) |
+| Allmän information | [inera.se](https://www.inera.se) |
