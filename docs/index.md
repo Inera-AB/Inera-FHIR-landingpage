@@ -38,8 +38,11 @@ Till exempel: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir
 
 ### Publicerade Implementation Guides
 
-En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Publicerade IG:er inkluderar för närvarande:
+En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Publicerade IG:ar inkluderar för närvarande:
 
+- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/EHDS-TK)** - FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt mappas till FHIR för att informationsförsörja NPÖ och 1177 Journal.
+
+Kommande IG:ar är:
 - **[Inera CareTeam](https://fhir.inera.se/ig/careteam/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
 - **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** — Profiler för `Questionnaire` och `QuestionnaireResponse` som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.
 
