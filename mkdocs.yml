@@ -1,5 +1,5 @@
 site_name: Inera's FHIR Standards
-site_url: https://inera-ab.github.io/Inera-FHIR-landingpage/
+site_url: https://fhir.inera.se/
 site_description: Landing page for Inera's FHIR standards and implementation guides
 site_author: Inera AB
 
@@ -8,7 +8,7 @@ repo_url: https://github.com/Inera-AB/Inera-FHIR-landingpage
 
 theme:
   name: material
-  language: en
+  language: sv
   logo: assets/images/inera-logo.svg
   favicon: assets/images/inera-thumbnail.png
   custom_dir: overrides
@@ -33,27 +33,27 @@ plugins:
       reconfigure_material: true
       reconfigure_search: true
       languages:
-        - locale: en
-          default: true
-          name: "🇬🇧 English"
-          build: true
         - locale: sv
+          default: true
           name: "🇸🇪 Svenska"
           build: true
+        - locale: en
+          name: "🇬🇧 English"
+          build: true
           nav_translations:
-            Home: Hem
-            "New to FHIR?": "Ny på FHIR?"
-            FAQ: Vanliga frågor
-            Governance: Styrning
+            Hem: Home
+            "Ny på FHIR?": "New to FHIR?"
+            "Vanliga frågor": FAQ
+            Styrning: Governance
 
 extra_css:
   - assets/css/inera.css
 
 nav:
-  - Home: index.md
-  - New to FHIR?: assets/documents/NewToFHIR.md
-  - FAQ: assets/documents/FAQ.md
-  - Governance: assets/documents/Governance.md
+  - Hem: index.md
+  - Ny på FHIR?: assets/documents/NewToFHIR.md
+  - Vanliga frågor: assets/documents/FAQ.md
+  - Styrning: assets/documents/Governance.md
 
 markdown_extensions:
   - toc:

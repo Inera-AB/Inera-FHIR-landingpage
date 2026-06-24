@@ -1,44 +1,44 @@
-# New to FHIR?
+# Ny på FHIR?
 
-This page provides a brief introduction to FHIR for those who are new to it or have limited experience with the standard.
+Den här sidan ger en kort introduktion till FHIR för dig som är ny inom området eller har begränsad erfarenhet av standarden.
 
-## What is FHIR?
+## Vad är FHIR?
 
-**FHIR** (Fast Healthcare Interoperability Resources) is an international standard developed by [HL7 International](https://www.hl7.org/fhir/) for the exchange of healthcare information. FHIR defines a set of **resources** — building blocks that represent common healthcare concepts such as a Patient, an Observation, a Medication or an Appointment.
+**FHIR** (Fast Healthcare Interoperability Resources) är en internationell standard framtagen av [HL7 International](https://www.hl7.org/fhir/) för utbyte av hälso- och sjukvårdsinformation. FHIR definierar en uppsättning **resurser** — byggstenar som representerar vanliga vårdinformationsbegrepp som Patient, Observation, Läkemedel eller Möte.
 
-FHIR is designed to be:
+FHIR är utformat för att vara:
 
-- **Web-friendly** — resources are exchanged using standard web technologies (HTTP, JSON, XML).
-- **Modular** — you combine resources to represent complex healthcare scenarios.
-- **Extensible** — base resources can be profiled and extended to fit local requirements.
+- **Webbaserat** — resurser utbyts med standardiserade webbtekniker (HTTP, JSON, XML).
+- **Modulärt** — du kombinerar resurser för att representera komplexa vårdscenarier.
+- **Utbyggbart** — basresurser kan profileras och utökas för att passa lokala krav.
 
-## Key concepts
+## Nyckelbegrepp
 
-| Term | Description |
+| Term | Beskrivning |
 |------|-------------|
-| **Resource** | A discrete unit of interoperable information, e.g. `Patient`, `Observation`, `MedicationRequest`. |
-| **Profile** | A set of constraints applied to a base resource to fit a specific use case or national context. |
-| **Implementation Guide (IG)** | A collection of profiles, extensions, value sets and narrative documentation for a specific standard or domain. |
-| **Extension** | An additional data element added to a resource beyond what is in the base FHIR specification. |
-| **ValueSet / CodeSystem** | Defines the coded values (terminology) that can be used in a given field. |
-| **CapabilityStatement** | Describes what a FHIR server or client supports — which resources, interactions and search parameters. |
+| **Resurs** | En diskret enhet interoperabel information, t.ex. `Patient`, `Observation`, `MedicationRequest`. |
+| **Profil** | En uppsättning begränsningar tillämpade på en basresurs för att passa ett specifikt användningsfall eller nationellt sammanhang. |
+| **Implementation Guide (IG)** | En samling profiler, tillägg, värdemängder och narrativ dokumentation för en specifik standard eller domän. |
+| **Tillägg (Extension)** | Ett ytterligare dataelement lagt till en resurs utöver vad som finns i bas-FHIR-specifikationen. |
+| **ValueSet / CodeSystem** | Definierar de kodade värden (terminologi) som kan användas i ett givet fält. |
+| **CapabilityStatement** | Beskriver vad en FHIR-server eller klient stöder — vilka resurser, interaktioner och sökparametrar. |
 
-## How Inera authors Implementation Guides
+## Hur Inera tar fram Implementation Guides
 
-Inera authors FHIR Implementation Guides using **FHIR Shorthand (FSH)** and the **FHIR IG Publisher**. This toolchain is the HL7-recommended way to produce IGs and is used by national programmes worldwide.
+Inera tar fram FHIR Implementation Guides med hjälp av **FHIR Shorthand (FSH)** och **FHIR IG Publisher**. Denna verktygskedja är HL7:s rekommenderade sätt att producera IG:er och används av nationella program världen över.
 
 ### FHIR Shorthand (FSH)
 
-[FHIR Shorthand](https://build.fhir.org/ig/HL7/fhir-shorthand/) is a domain-specific language designed specifically for defining FHIR profiles, extensions, value sets and examples. It is compact and human-readable, making it much easier to author and review than raw JSON or XML StructureDefinitions.
+[FHIR Shorthand](https://build.fhir.org/ig/HL7/fhir-shorthand/) är ett domänspecifikt språk framtaget specifikt för att definiera FHIR-profiler, tillägg, värdemängder och exempel. Det är kompakt och lättläst, vilket gör det mycket enklare att skapa och granska än råa JSON- eller XML-StructureDefinitions.
 
-A simple FSH profile looks like this:
+En enkel FSH-profil ser ut så här:
 
 ```fsh
 Profile: IneraPatient
 Parent: Patient
 Id: inera-patient
 Title: "Inera Patient"
-Description: "Patient profile adapted for Swedish national services."
+Description: "Patientprofil anpassad för svenska nationella tjänster."
 
 * identifier 1..* MS
 * identifier ^slicing.discriminator.type = #pattern
@@ -46,45 +46,45 @@ Description: "Patient profile adapted for Swedish national services."
 * identifier ^slicing.rules = #open
 ```
 
-**Learn FSH at [FSH School](https://fshschool.org)** — an interactive online course that walks you through the FSH language from basics to advanced profiling, with live exercises directly in the browser.
+**Lär dig FSH på [FSH School](https://fshschool.org)** — en interaktiv onlinekurs som guidar dig genom FSH-språket från grunderna till avancerad profilering, med direkta övningar i webbläsaren.
 
-### IG Publisher and IG Builder
+### IG Publisher och IG Builder
 
-The **FHIR IG Publisher** is the official HL7 tool that takes FSH source files and produces a complete, publishable Implementation Guide website — including rendered profiles, examples, validation, and a navigable HTML site.
+**FHIR IG Publisher** är det officiella HL7-verktyget som tar FSH-källfiler och producerar en komplett, publicerbar Implementation Guide-webbplats — inklusive renderade profiler, exempel, validering och en navigerbar HTML-sajt.
 
-The **[IG Builder guidance](https://build.fhir.org/ig/FHIR/ig-guidance/)** on build.fhir.org covers everything you need to know about setting up and running an IG project:
+**[IG Builder-vägledningen](https://build.fhir.org/ig/FHIR/ig-guidance/)** på build.fhir.org täcker allt du behöver veta om att sätta upp och köra ett IG-projekt:
 
-- Project folder structure and `sushi-config.yaml`
-- Running SUSHI (the FSH compiler) and the IG Publisher
-- Configuring pages, menus and narrative content
-- Publishing and CI/CD pipelines
+- Projektmappsstruktur och `sushi-config.yaml`
+- Köra SUSHI (FSH-kompilatorn) och IG Publisher
+- Konfigurera sidor, menyer och narrativt innehåll
+- Publicering och CI/CD-pipelines
 
-The continuous integration server at [build.fhir.org](https://build.fhir.org) automatically builds every IG hosted on GitHub and makes a live preview available — Inera uses this for pre-release review of IGs before they are formally published.
+Den kontinuerliga integrationsservern på [build.fhir.org](https://build.fhir.org) bygger automatiskt varje IG som finns på GitHub och gör en direktförhandsvisning tillgänglig — Inera använder detta för förhandsgranskning av IG:er innan de publiceras formellt.
 
-## How to read an Implementation Guide
+## Hur man läser en Implementation Guide
 
-Inera's Implementation Guides are published at [fhir.inera.se](https://fhir.inera.se) following the URL pattern `https://fhir.inera.se/ig/<name>/` — for example [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/). Each IG is structured as follows:
+Ineras Implementation Guides publiceras på [fhir.inera.se](https://fhir.inera.se) enligt URL-mönstret `https://fhir.inera.se/ig/<namn>/` — till exempel [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/). Varje IG är strukturerad på följande sätt:
 
-1. **Introduction** — describes the purpose and scope of the standard.
-2. **Profiles** — lists the FHIR resource profiles defined in the IG, with constraints and cardinalities.
-3. **Extensions** — lists any custom extensions introduced.
-4. **Terminology** — lists the ValueSets and CodeSystems used.
-5. **Examples** — shows concrete example FHIR resources conforming to the profiles.
-6. **CapabilityStatements** — describes what implementers must support.
+1. **Introduktion** — beskriver standardens syfte och omfattning.
+2. **Profiler** — listar de FHIR-resursprofiler som definieras i IG:en, med begränsningar och kardinaliteter.
+3. **Tillägg** — listar eventuella anpassade tillägg som introduceras.
+4. **Terminologi** — listar de ValueSets och CodeSystems som används.
+5. **Exempel** — visar konkreta exempel på FHIR-resurser som följer profilerna.
+6. **CapabilityStatements** — beskriver vad implementatörer måste stödja.
 
-> Start with the **Introduction** and **Use cases** before diving into the profiles. Understanding the clinical and business context makes it much easier to interpret the technical constraints.
+> Börja med **Introduktionen** och **Användningsfallen** innan du dyker in i profilerna. Att förstå det kliniska och verksamhetsmässiga sammanhanget gör det mycket lättare att tolka de tekniska begränsningarna.
 
-## Useful external resources
+## Användbara externa resurser
 
-- [Inera FHIR standards](https://fhir.inera.se) — all Inera IGs
-- [HL7 FHIR R4 specification](https://hl7.org/fhir/R4/)
-- [FSH School](https://fshschool.org) — interactive course for learning FHIR Shorthand
-- [IG Builder guidance](https://build.fhir.org/ig/FHIR/ig-guidance/) — official guide to authoring and publishing FHIR IGs
-- [FHIR Shorthand specification](https://build.fhir.org/ig/HL7/fhir-shorthand/) — full FSH language reference
-- [build.fhir.org](https://build.fhir.org) — continuous build server for FHIR IGs
-- [FHIR for beginners (HL7)](https://www.hl7.org/fhir/overview.html)
-- [HL7 Sweden](https://hl7.se) — Swedish FHIR community and base profiles
+- [Ineras FHIR-standarder](https://fhir.inera.se) — alla Inera IG:er
+- [HL7 FHIR R4-specifikationen](https://hl7.org/fhir/R4/)
+- [FSH School](https://fshschool.org) — interaktiv kurs för att lära sig FHIR Shorthand
+- [IG Builder-vägledning](https://build.fhir.org/ig/FHIR/ig-guidance/) — officiell guide för att ta fram och publicera FHIR IG:er
+- [FHIR Shorthand-specifikationen](https://build.fhir.org/ig/HL7/fhir-shorthand/) — fullständig FSH-språkreferens
+- [build.fhir.org](https://build.fhir.org) — kontinuerlig byggserver för FHIR IG:er
+- [FHIR för nybörjare (HL7)](https://www.hl7.org/fhir/overview.html)
+- [HL7 Sweden](https://hl7.se) — svensk FHIR-community och basprofiler
 
-## Questions?
+## Frågor?
 
-If you have questions about Inera's FHIR work, contact us at [fhir@inera.se](mailto:fhir@inera.se).
+Har du frågor om Ineras FHIR-arbete, kontakta oss på [fhir@inera.se](mailto:fhir@inera.se).
