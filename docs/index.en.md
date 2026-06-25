@@ -4,7 +4,7 @@
 
 * [1 Inera's FHIR specifications](#1-ineras-fhir-standards)
 * [2 Implementing an Inera FHIR specification](#2-implementing-an-inera-fhir-standard)
-    * [2.1 Standard documentation](#21-standard-documentation)
+    * [2.1 Specification documentation](#21-specification-documentation)
     * [2.2 General governance for Inera FHIR specifications](#22-general-governance-for-inera-fhir-standards)
 * [3 Test and verification](#3-test-and-verification)
 * [4 Change management and versioning](#4-change-management-and-versioning)

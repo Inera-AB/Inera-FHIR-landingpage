@@ -4,7 +4,7 @@
 
 * [1 Ineras FHIR-specifikationer](#1-ineras-fhir-standarder)
 * [2 Implementera en Inera FHIR-specifikation](#2-implementera-en-inera-fhir-standard)
-    * [2.1 Standarddokumentation](#21-standarddokumentation)
+    * [2.1 Specifikationsdokumentation](#21-specifikationsdokumentation)
     * [2.2 Generell styrning för Inera FHIR-specifikationer](#22-generell-styrning-for-inera-fhir-standarder)
 * [3 Test och verifiering](#3-test-och-verifiering)
 * [4 Ändringshantering och versionshantering](#4-andringshantering-och-versionshantering)
