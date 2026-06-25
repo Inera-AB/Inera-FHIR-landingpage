@@ -1,8 +1,1 @@
 {% extends "base.html" %}
-
-{% block header %}
-  <a class="md-skip-nav" href="#main-content" tabindex="1">
-    {% if config.theme.language == "sv" %}Hoppa till innehållet{% else %}Skip to main content{% endif %}
-  </a>
-  {{ super() }}
-{% endblock %}

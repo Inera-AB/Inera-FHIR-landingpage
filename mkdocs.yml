@@ -49,6 +49,9 @@ plugins:
 extra_css:
   - assets/css/inera.css
 
+extra_javascript:
+  - assets/js/wcag-aria.js
+
 nav:
   - Hem: index.md
   - Ny på FHIR?: assets/documents/NewToFHIR.md
