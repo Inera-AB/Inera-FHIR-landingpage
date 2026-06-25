@@ -22,6 +22,9 @@ theme:
     - toc.integrate
     - content.tooltips
 
+hooks:
+  - hooks/aria_fixes.py
+
 plugins:
   - search:
       lang:
