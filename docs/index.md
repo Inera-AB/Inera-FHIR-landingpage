@@ -2,13 +2,13 @@
 
 **Innehållsförteckning**
 
-* [1 Ineras FHIR-specifikationer](#1-ineras-fhir-standarder)
-* [2 Implementera en Inera FHIR-specifikation](#2-implementera-en-inera-fhir-standard)
+* [1 Ineras FHIR-specifikationer](#1-ineras-fhir-specifikationer)
+* [2 Implementera en Inera FHIR-specifikation](#2-implementera-en-inera-fhir-specifikation)
     * [2.1 Specifikationsdokumentation](#21-specifikationsdokumentation)
-    * [2.2 Generell styrning för Inera FHIR-specifikationer](#22-generell-styrning-for-inera-fhir-standarder)
+    * [2.2 Generell styrning för Inera FHIR-specifikationer](#22-generell-styrning-for-inera-fhir-specifikationer)
 * [3 Test och verifiering](#3-test-och-verifiering)
 * [4 Ändringshantering och versionshantering](#4-andringshantering-och-versionshantering)
-    * [4.1 Versionshantering av Inera FHIR-specifikationer](#41-versionshantering-av-inera-fhir-standarder)
+    * [4.1 Versionshantering av Inera FHIR-specifikationer](#41-versionshantering-av-inera-fhir-specifikationer)
     * [4.2 Ändringsönskemål och förbättringar](#42-andringsonskemal-och-forbattringar)
 * [5 Vill du hålla dig uppdaterad?](#5-vill-du-halla-dig-uppdaterad)
 * [6 Ny på FHIR?](#6-ny-pa-fhir)

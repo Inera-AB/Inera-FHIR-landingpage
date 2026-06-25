@@ -2,13 +2,13 @@
 
 **Table of contents**
 
-* [1 Inera's FHIR specifications](#1-ineras-fhir-standards)
-* [2 Implementing an Inera FHIR specification](#2-implementing-an-inera-fhir-standard)
+* [1 Inera's FHIR specifications](#1-ineras-fhir-specifications)
+* [2 Implementing an Inera FHIR specification](#2-implementing-an-inera-fhir-specification)
     * [2.1 Specification documentation](#21-specification-documentation)
-    * [2.2 General governance for Inera FHIR specifications](#22-general-governance-for-inera-fhir-standards)
+    * [2.2 General governance for Inera FHIR specifications](#22-general-governance-for-inera-fhir-specifications)
 * [3 Test and verification](#3-test-and-verification)
 * [4 Change management and versioning](#4-change-management-and-versioning)
-    * [4.1 Versioning of Inera FHIR specifications](#41-versioning-of-inera-fhir-standards)
+    * [4.1 Versioning of Inera FHIR specifications](#41-versioning-of-inera-fhir-specifications)
     * [4.2 Change requests and improvements](#42-change-requests-and-improvements)
 * [5 Want to stay updated?](#5-want-to-stay-updated)
 * [6 New to FHIR?](#6-new-to-fhir)
