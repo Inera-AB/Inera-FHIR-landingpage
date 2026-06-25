@@ -1,14 +1,14 @@
-# Welcome to Inera's FHIR® Standards
+# Welcome to Inera's FHIR® Specifications
 
 **Table of contents**
 
-* [1 Inera's FHIR standards](#1-ineras-fhir-standards)
-* [2 Implementing an Inera FHIR standard](#2-implementing-an-inera-fhir-standard)
+* [1 Inera's FHIR specifications](#1-ineras-fhir-standards)
+* [2 Implementing an Inera FHIR specification](#2-implementing-an-inera-fhir-standard)
     * [2.1 Standard documentation](#21-standard-documentation)
-    * [2.2 General governance for Inera FHIR standards](#22-general-governance-for-inera-fhir-standards)
+    * [2.2 General governance for Inera FHIR specifications](#22-general-governance-for-inera-fhir-standards)
 * [3 Test and verification](#3-test-and-verification)
 * [4 Change management and versioning](#4-change-management-and-versioning)
-    * [4.1 Versioning of Inera FHIR standards](#41-versioning-of-inera-fhir-standards)
+    * [4.1 Versioning of Inera FHIR specifications](#41-versioning-of-inera-fhir-standards)
     * [4.2 Change requests and improvements](#42-change-requests-and-improvements)
 * [5 Want to stay updated?](#5-want-to-stay-updated)
 * [6 New to FHIR?](#6-new-to-fhir)
@@ -18,15 +18,15 @@
 
 Inera manages and develops national digital infrastructure for Swedish healthcare. As part of this work, Inera publishes FHIR-based Implementation Guides (IGs) that enable standardised and interoperable information exchange between healthcare systems and actors across Sweden.
 
-The purpose of this site is to guide you to the right documentation and technical specifications for Inera's FHIR standards.
+The purpose of this site is to guide you to the right documentation and technical specifications for Inera's FHIR specifications.
 
 > **Note:** Technical documentation is published in English. Clinical guidelines and governance documents are published in Swedish.
 
 ---
 
-## 1 Inera's FHIR standards
+## 1 Inera's FHIR specifications
 
-Inera's FHIR standards cover a wide range of national e-health services. Each standard is described in an Implementation Guide (IG) containing profiles, extensions, terminology and rules for how information shall be structured and exchanged.
+Inera's FHIR specifications cover a wide range of national e-health services. Each specification is described in an Implementation Guide (IG) containing profiles, extensions, terminology and rules for how information shall be structured and exchanged.
 
 All Inera FHIR Implementation Guides are published at **[fhir.inera.se](https://fhir.inera.se)**. Each IG follows a predictable URL pattern based on its name:
 
@@ -49,20 +49,20 @@ A complete and up-to-date listing of all published Inera FHIR Implementation Gui
 
 ### Tools and Support
 
-- **Inera Core** *(coming soon)* — Foundational profiles reused across Inera's FHIR standards, e.g. Patient, Organisation and Practitioner profiles adapted to Swedish requirements (personal identity number, HSA-id, etc.).
+- **Inera Core** *(coming soon)* — Foundational profiles reused across Inera's FHIR specifications, e.g. Patient, Organisation and Practitioner profiles adapted to Swedish requirements (personal identity number, HSA-id, etc.).
 - **[IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate)** — A GitHub template repository for creating new Inera FHIR Implementation Guides, with pre-configured toolchain, CI/CD and Inera branding.
 
 <br><br>
 
-## 2 Implementing an Inera FHIR standard
+## 2 Implementing an Inera FHIR specification
 
-When implementing an Inera FHIR standard it is important to understand both the business context and the technical specifications. The sections below describe the key components of the standard documentation and the governance that governs how information exchange shall be carried out.
+When implementing an Inera FHIR specification it is important to understand both the business context and the technical specifications. The sections below describe the key components of the specification documentation and the governance that governs how information exchange shall be carried out.
 
 <br>
 
-### 2.1 Standard documentation
+### 2.1 Specification documentation
 
-Each Inera FHIR standard is delivered with documentation that describes how the standard should be used and what requirements apply. The documentation may consist of:
+Each Inera FHIR specification is delivered with documentation that describes how the specification should be used and what requirements apply. The documentation may consist of:
 
 - **Implementation Guide (IG):** The technical specifications for the standard, published at [fhir.inera.se/ig/\<name\>/](https://fhir.inera.se).
 - **Clinical guidelines:** Background and clinical rationale behind the standard.
@@ -72,11 +72,11 @@ Each Inera FHIR standard is delivered with documentation that describes how the 
 
 <br>
 
-### 2.2 General governance for Inera FHIR standards
+### 2.2 General governance for Inera FHIR specifications
 
-The governance describes how Inera manages the lifecycle of its FHIR standards — from requirements gathering and publication to change management and decommissioning. It is important to understand the governance process before starting an implementation.
+The governance describes how Inera manages the lifecycle of its FHIR specifications — from requirements gathering and publication to change management and decommissioning. It is important to understand the governance process before starting an implementation.
 
-[Click here for more information about governance of Inera's FHIR standards.](assets/documents/Governance.md)
+[Click here for more information about governance of Inera's FHIR specifications.](assets/documents/Governance.md)
 
 <br>
 
@@ -96,9 +96,9 @@ Contact Inera Customer Service or the responsible service manager to start the t
 
 ## 4 Change management and versioning
 
-### 4.1 Versioning of Inera FHIR standards
+### 4.1 Versioning of Inera FHIR specifications
 
-Inera's FHIR standards follow [semantic versioning (SemVer 2.0)](https://semver.org/), adapted to Inera's governance process. A version identifier consists of three numbers separated by dots, e.g. **2.1.4**, representing *major.minor.patch*:
+Inera's FHIR specifications follow [semantic versioning (SemVer 2.0)](https://semver.org/), adapted to Inera's governance process. A version identifier consists of three numbers separated by dots, e.g. **2.1.4**, representing *major.minor.patch*:
 
 - **MAJOR** — changed when making incompatible changes to the API or profiling.
 - **MINOR** — changed when adding new functionality in a backward-compatible manner.
@@ -131,7 +131,7 @@ You can subscribe to updates from Inera's FHIR repositories on GitHub:
 
 > You need a GitHub account to watch a repository. Create a free account at [github.com/signup](https://github.com/signup).
 
-You can also follow [inera.se](https://www.inera.se) for news about service development and FHIR standards.
+You can also follow [inera.se](https://www.inera.se) for news about service development and FHIR specifications.
 
 <br>
 

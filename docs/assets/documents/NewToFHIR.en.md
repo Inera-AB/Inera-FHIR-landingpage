@@ -76,7 +76,7 @@ Inera's Implementation Guides are published at [fhir.inera.se](https://fhir.iner
 
 ## Useful external resources
 
-- [Inera FHIR standards](https://fhir.inera.se) — all Inera IGs
+- [Inera FHIR specifications](https://fhir.inera.se) — all Inera IGs
 - [HL7 FHIR R4 specification](https://hl7.org/fhir/R4/)
 - [FSH School](https://fshschool.org) — interactive course for learning FHIR Shorthand
 - [IG Builder guidance](https://build.fhir.org/ig/FHIR/ig-guidance/) — official guide to authoring and publishing FHIR IGs

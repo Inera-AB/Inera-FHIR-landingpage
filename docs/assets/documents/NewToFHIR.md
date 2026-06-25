@@ -76,7 +76,7 @@ Ineras Implementation Guides publiceras på [fhir.inera.se](https://fhir.inera.s
 
 ## Användbara externa resurser
 
-- [Ineras FHIR-standarder](https://fhir.inera.se) — alla Inera IG:er
+- [Ineras FHIR-specifikationer](https://fhir.inera.se) — alla Inera IG:er
 - [HL7 FHIR R4-specifikationen](https://hl7.org/fhir/R4/)
 - [FSH School](https://fshschool.org) — interaktiv kurs för att lära sig FHIR Shorthand
 - [IG Builder-vägledning](https://build.fhir.org/ig/FHIR/ig-guidance/) — officiell guide för att ta fram och publicera FHIR IG:er

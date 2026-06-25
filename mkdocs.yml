@@ -1,6 +1,6 @@
-site_name: Inera's FHIR Standards
+site_name: Inera's FHIR Specifications
 site_url: https://fhir.inera.se/
-site_description: Landing page for Inera's FHIR standards and implementation guides
+site_description: Landing page for Inera's FHIR specifications and implementation guides
 site_author: Inera AB
 
 repo_name: Inera-AB/Inera-FHIR-landingpage

@@ -1,17 +1,17 @@
-# Governance of Inera's FHIR Standards
+# Governance of Inera's FHIR Specifications
 
-This page describes the general governance for Inera's FHIR standards — how they are developed, maintained, versioned and retired.
+This page describes the general governance for Inera's FHIR specifications — how they are developed, maintained, versioned and retired.
 
 ## Governance principles
 
-Inera's FHIR standards are governed according to the following principles:
+Inera's FHIR specifications are governed according to the following principles:
 
-- **Transparency** — all standards and their change history are publicly available on GitHub and Simplifier.net.
+- **Transparency** — all specifications and their change history are publicly available on GitHub and Simplifier.net.
 - **Collaboration** — requirements are gathered in collaboration with regions, municipalities, system vendors and clinical stakeholders.
 - **Stability** — breaking changes are minimised and communicated well in advance.
 - **Interoperability** — Inera's profiles build on national base profiles from [HL7 Sweden](https://hl7.se) and international standards from HL7 International.
 
-## Lifecycle of a FHIR standard
+## Lifecycle of a FHIR specification
 
 ```
 Requirement → Design → Review → Publish (pre-release) → Pilot → Publish (release) → Maintenance → Retirement
@@ -30,7 +30,7 @@ Requirement → Design → Review → Publish (pre-release) → Pilot → Publis
 
 ## Versioning
 
-Inera's FHIR standards use [semantic versioning (SemVer 2.0)](https://semver.org/):
+Inera's FHIR specifications use [semantic versioning (SemVer 2.0)](https://semver.org/):
 
 - `MAJOR.MINOR.PATCH` — e.g. `2.1.4`
 - Pre-releases use a suffix — e.g. `2.0.0-beta.1`
@@ -50,7 +50,7 @@ Major and minor version decisions are made in consultation with the relevant gov
 | **Inera FHIR team** | Designs and maintains FHIR profiles and IGs. |
 | **Service manager** | Owns the business requirements for a specific service. |
 | **Stakeholder group** | Regions, municipalities and clinical experts who participate in requirements gathering and review. |
-| **System vendors** | Implement the standards and provide feedback from a technical implementation perspective. |
+| **System vendors** | Implement the specifications and provide feedback from a technical implementation perspective. |
 
 ## Change request process
 

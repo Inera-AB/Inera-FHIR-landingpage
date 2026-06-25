@@ -20,9 +20,9 @@ Source code and issue tracking are available on [GitHub](https://github.com/Iner
 
 ## Implementation
 
-**What version of FHIR do Inera's standards use?**
+**What version of FHIR do Inera's specifications use?**
 
-Inera's current standards target **FHIR R4** (version 4.0.1).
+Inera's current specifications target **FHIR R4** (version 4.0.1).
 
 **Do I need to implement all profiles in an IG?**
 
@@ -52,7 +52,7 @@ Inera currently provides test environments for connected system vendors. Please 
 
 ## Change management
 
-**How are changes to Inera's FHIR standards communicated?**
+**How are changes to Inera's FHIR specifications communicated?**
 
 Changes are communicated through:
 

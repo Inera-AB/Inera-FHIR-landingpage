@@ -1,6 +1,6 @@
 # Inera FHIR Landing Page
 
-Source for the [Inera FHIR standards landing page](https://inera-ab.github.io/Inera-FHIR-landingpage/), built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
+Source for the [Inera FHIR specifications landing page](https://inera-ab.github.io/Inera-FHIR-landingpage/), built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
 ## Local development
 

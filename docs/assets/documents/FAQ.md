@@ -20,9 +20,9 @@ Källkod och ärendehantering finns på [GitHub](https://github.com/Inera-AB).
 
 ## Implementering
 
-**Vilken version av FHIR använder Ineras standarder?**
+**Vilken version av FHIR använder Ineras specifikationer?**
 
-Ineras nuvarande standarder riktar sig mot **FHIR R4** (version 4.0.1).
+Ineras nuvarande specifikationer riktar sig mot **FHIR R4** (version 4.0.1).
 
 **Måste jag implementera alla profiler i en IG?**
 
@@ -52,7 +52,7 @@ Inera tillhandahåller för närvarande testmiljöer för anslutna systemleveran
 
 ## Ändringshantering
 
-**Hur kommuniceras ändringar i Ineras FHIR-standarder?**
+**Hur kommuniceras ändringar i Ineras FHIR-specifikationer?**
 
 Ändringar kommuniceras via:
 

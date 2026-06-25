@@ -1,17 +1,17 @@
-# Styrning av Ineras FHIR-standarder
+# Styrning av Ineras FHIR-specifikationer
 
-Den här sidan beskriver den generella styrningen för Ineras FHIR-standarder — hur de utvecklas, förvaltas, versionshanteras och avvecklas.
+Den här sidan beskriver den generella styrningen för Ineras FHIR-specifikationer — hur de utvecklas, förvaltas, versionshanteras och avvecklas.
 
 ## Styrningsprinciper
 
-Ineras FHIR-standarder styrs enligt följande principer:
+Ineras FHIR-specifikationer styrs enligt följande principer:
 
-- **Transparens** — alla standarder och deras ändringshistorik är offentligt tillgängliga på GitHub och Simplifier.net.
+- **Transparens** — alla specifikationer och deras ändringshistorik är offentligt tillgängliga på GitHub och Simplifier.net.
 - **Samverkan** — krav samlas in i samarbete med regioner, kommuner, systemleverantörer och kliniska intressenter.
 - **Stabilitet** — brytande ändringar minimeras och kommuniceras i god tid.
 - **Interoperabilitet** — Ineras profiler bygger på nationella basprofiler från [HL7 Sweden](https://hl7.se) och internationella standarder från HL7 International.
 
-## Livscykel för en FHIR-standard
+## Livscykel för en FHIR-specifikation
 
 ```
 Krav → Design → Granskning → Publicering (förhandsversion) → Pilot → Publicering (release) → Förvaltning → Avveckling
@@ -30,7 +30,7 @@ Krav → Design → Granskning → Publicering (förhandsversion) → Pilot → 
 
 ## Versionshantering
 
-Ineras FHIR-standarder använder [semantisk versionshantering (SemVer 2.0)](https://semver.org/):
+Ineras FHIR-specifikationer använder [semantisk versionshantering (SemVer 2.0)](https://semver.org/):
 
 - `MAJOR.MINOR.PATCH` — t.ex. `2.1.4`
 - Förhandsversioner använder ett suffix — t.ex. `2.0.0-beta.1`
@@ -50,7 +50,7 @@ Beslut om major- och minorversioner fattas i samråd med relevanta styrningsgrup
 | **Ineras FHIR-team** | Utformar och förvaltar FHIR-profiler och IG:er. |
 | **Tjänsteförvaltare** | Äger verksamhetskraven för en specifik tjänst. |
 | **Intressentgrupp** | Regioner, kommuner och kliniska experter som deltar i kravinhämtning och granskning. |
-| **Systemleverantörer** | Implementerar standarderna och ger återkoppling från ett tekniskt implementeringsperspektiv. |
+| **Systemleverantörer** | Implementerar specifikationerna och ger återkoppling från ett tekniskt implementeringsperspektiv. |
 
 ## Ändringshanteringsprocess
 

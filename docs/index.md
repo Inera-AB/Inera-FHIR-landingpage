@@ -1,14 +1,14 @@
-# Välkommen till Ineras FHIR®-standarder
+# Välkommen till Ineras FHIR®-specifikationer
 
 **Innehållsförteckning**
 
-* [1 Ineras FHIR-standarder](#1-ineras-fhir-standarder)
-* [2 Implementera en Inera FHIR-standard](#2-implementera-en-inera-fhir-standard)
+* [1 Ineras FHIR-specifikationer](#1-ineras-fhir-standarder)
+* [2 Implementera en Inera FHIR-specifikation](#2-implementera-en-inera-fhir-standard)
     * [2.1 Standarddokumentation](#21-standarddokumentation)
-    * [2.2 Generell styrning för Inera FHIR-standarder](#22-generell-styrning-for-inera-fhir-standarder)
+    * [2.2 Generell styrning för Inera FHIR-specifikationer](#22-generell-styrning-for-inera-fhir-standarder)
 * [3 Test och verifiering](#3-test-och-verifiering)
 * [4 Ändringshantering och versionshantering](#4-andringshantering-och-versionshantering)
-    * [4.1 Versionshantering av Inera FHIR-standarder](#41-versionshantering-av-inera-fhir-standarder)
+    * [4.1 Versionshantering av Inera FHIR-specifikationer](#41-versionshantering-av-inera-fhir-standarder)
     * [4.2 Ändringsönskemål och förbättringar](#42-andringsonskemal-och-forbattringar)
 * [5 Vill du hålla dig uppdaterad?](#5-vill-du-halla-dig-uppdaterad)
 * [6 Ny på FHIR?](#6-ny-pa-fhir)
@@ -18,15 +18,15 @@
 
 Inera förvaltar och utvecklar nationell digital infrastruktur för svensk hälso- och sjukvård. Som en del av detta arbete publicerar Inera FHIR-baserade Implementation Guides (IG:er) som möjliggör standardiserat och interoperabelt informationsutbyte mellan vårdsystem och aktörer i Sverige.
 
-Syftet med denna webbplats är att vägleda dig till rätt dokumentation och tekniska specifikationer för Ineras FHIR-standarder.
+Syftet med denna webbplats är att vägleda dig till rätt dokumentation och tekniska specifikationer för Ineras FHIR-specifikationer.
 
 > **Notera:** Teknisk dokumentation publiceras på engelska. Kliniska riktlinjer och styrdokument publiceras på svenska.
 
 ---
 
-## 1 Ineras FHIR-standarder
+## 1 Ineras FHIR-specifikationer
 
-Ineras FHIR-standarder täcker ett brett spektrum av nationella e-hälsotjänster. Varje standard beskrivs i en Implementation Guide (IG) som innehåller profiler, tillägg, terminologi och regler för hur information ska struktureras och utbytas.
+Ineras FHIR-specifikationer täcker ett brett spektrum av nationella e-hälsotjänster. Varje specifikation beskrivs i en Implementation Guide (IG) som innehåller profiler, tillägg, terminologi och regler för hur information ska struktureras och utbytas.
 
 Alla Inera FHIR Implementation Guides publiceras på **[fhir.inera.se](https://fhir.inera.se)**. Varje IG följer ett förutsägbart URL-mönster baserat på sitt namn:
 
@@ -52,20 +52,20 @@ Kommande IG:ar är:
 
 ### Verktyg och stöd
 
-- **Inera Core** *(kommer snart)* — Grundläggande profiler som återanvänds i Ineras FHIR-standarder, t.ex. Patient-, Organisations- och Utövarprofiler anpassade till svenska krav (personnummer, HSA-id, etc.).
+- **Inera Core** *(kommer snart)* — Grundläggande profiler som återanvänds i Ineras FHIR-specifikationer, t.ex. Patient-, Organisations- och Utövarprofiler anpassade till svenska krav (personnummer, HSA-id, etc.).
 - **[IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate)** — Ett GitHub-mallarkiv för att skapa nya Inera FHIR Implementation Guides, med förkonfigurerad verktygskedja, CI/CD och Ineras varumärkesstil.
 
 <br><br>
 
-## 2 Implementera en Inera FHIR-standard
+## 2 Implementera en Inera FHIR-specifikation
 
-Vid implementering av en Inera FHIR-standard är det viktigt att förstå både verksamhetssammanhanget och de tekniska specifikationerna. Avsnitten nedan beskriver standarddokumentationens huvudkomponenter och den styrning som reglerar hur informationsutbyte ska genomföras.
+Vid implementering av en Inera FHIR-specifikation är det viktigt att förstå både verksamhetssammanhanget och de tekniska specifikationerna. Avsnitten nedan beskriver specifikationsdokumentationens huvudkomponenter och den styrning som reglerar hur informationsutbyte ska genomföras.
 
 <br>
 
-### 2.1 Standarddokumentation
+### 2.1 Specifikationsdokumentation
 
-Varje Inera FHIR-standard levereras med dokumentation som beskriver hur standarden ska användas och vilka krav som gäller. Dokumentationen kan bestå av:
+Varje Inera FHIR-specifikation levereras med dokumentation som beskriver hur specifikationen ska användas och vilka krav som gäller. Dokumentationen kan bestå av:
 
 - **Implementation Guide (IG):** De tekniska specifikationerna för standarden, publicerade på [fhir.inera.se/ig/\<namn\>/](https://fhir.inera.se).
 - **Kliniska riktlinjer:** Bakgrund och klinisk motivering bakom standarden.
@@ -75,11 +75,11 @@ Varje Inera FHIR-standard levereras med dokumentation som beskriver hur standard
 
 <br>
 
-### 2.2 Generell styrning för Inera FHIR-standarder
+### 2.2 Generell styrning för Inera FHIR-specifikationer
 
-Styrningen beskriver hur Inera hanterar livscykeln för sina FHIR-standarder — från kravinhämtning och publicering till ändringshantering och avveckling. Det är viktigt att förstå styrningsprocessen innan en implementering påbörjas.
+Styrningen beskriver hur Inera hanterar livscykeln för sina FHIR-specifikationer — från kravinhämtning och publicering till ändringshantering och avveckling. Det är viktigt att förstå styrningsprocessen innan en implementering påbörjas.
 
-[Klicka här för mer information om styrning av Ineras FHIR-standarder.](assets/documents/Governance.md)
+[Klicka här för mer information om styrning av Ineras FHIR-specifikationer.](assets/documents/Governance.md)
 
 <br>
 
@@ -99,9 +99,9 @@ Kontakta Ineras kundtjänst eller ansvarig tjänsteförvaltare för att påbörj
 
 ## 4 Ändringshantering och versionshantering
 
-### 4.1 Versionshantering av Inera FHIR-standarder
+### 4.1 Versionshantering av Inera FHIR-specifikationer
 
-Ineras FHIR-standarder följer [semantisk versionshantering (SemVer 2.0)](https://semver.org/), anpassad till Ineras styrningsprocess. En versionsidentifierare består av tre siffror separerade med punkter, t.ex. **2.1.4**, som representerar *major.minor.patch*:
+Ineras FHIR-specifikationer följer [semantisk versionshantering (SemVer 2.0)](https://semver.org/), anpassad till Ineras styrningsprocess. En versionsidentifierare består av tre siffror separerade med punkter, t.ex. **2.1.4**, som representerar *major.minor.patch*:
 
 - **MAJOR** — ändras vid inkompatibla ändringar av API:et eller profileringen.
 - **MINOR** — ändras vid tillägg av ny funktionalitet på ett bakåtkompatibelt sätt.
@@ -134,7 +134,7 @@ Du kan prenumerera på uppdateringar från Ineras FHIR-arkiv på GitHub:
 
 > Du behöver ett GitHub-konto för att bevaka ett arkiv. Skapa ett kostnadsfritt konto på [github.com/signup](https://github.com/signup).
 
-Du kan även följa [inera.se](https://www.inera.se) för nyheter om tjänsteutveckling och FHIR-standarder.
+Du kan även följa [inera.se](https://www.inera.se) för nyheter om tjänsteutveckling och FHIR-specifikationer.
 
 <br>
 
