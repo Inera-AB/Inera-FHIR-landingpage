@@ -40,7 +40,7 @@ Till exempel: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir
 
 En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Publicerade IG:ar inkluderar för närvarande:
 
-- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/ehds-tk)** - FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt mappas till FHIR för att informationsförsörja NPÖ och 1177 Journal.
+- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/ehds-tk)** - FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt för att informationsförsörja NPÖ och 1177 Journal mappas till FHIR.
 
 Kommande IG:ar är:
 - **[RIV Fasta Kontakter](https://fhir.inera.se/ig/fastakontakter/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
