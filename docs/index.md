@@ -34,17 +34,18 @@ Alla Inera FHIR Implementation Guides publiceras på **[fhir.inera.se](https://f
 https://fhir.inera.se/ig/<namn>/
 ```
 
-Till exempel: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
+Till exempel: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/fastakontakter/`](https://fhir.inera.se/ig/fastakontakter/).
 
 ### Publicerade Implementation Guides
 
 En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Publicerade IG:ar inkluderar för närvarande:
 
-- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/ehds-tk)** - FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt för att informationsförsörja NPÖ och 1177 Journal mappas till FHIR.
+- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/ehds-tk)** (*EHDS-bryggan*) — FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt för att informationsförsörja NPÖ och 1177 Journal mappas till FHIR.
 
 Kommande IG:ar är:
-- **[RIV Fasta Kontakter](https://fhir.inera.se/ig/fastakontakter/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
-- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** — Profiler för `Questionnaire` och `QuestionnaireResponse` som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.
+
+- **[Fasta kontakter](https://fhir.inera.se/ig/fastakontakter/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
+- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** (*Formulärtjänsten*) — Profiler för `Questionnaire` och `QuestionnaireResponse` som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.
 
 ### Terminologitjänsten
 

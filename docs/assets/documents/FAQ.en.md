@@ -11,7 +11,7 @@ Inera manages the national digital infrastructure for Swedish healthcare and is 
 All Inera FHIR Implementation Guides are published at [fhir.inera.se](https://fhir.inera.se) following the URL pattern `https://fhir.inera.se/ig/<name>/`. For example:
 
 - [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/)
-- [fhir.inera.se/ig/careteam/](https://fhir.inera.se/ig/careteam/)
+- [fhir.inera.se/ig/fastakontakter/](https://fhir.inera.se/ig/fastakontakter/)
 - [fhir.inera.se/ig/forms/](https://fhir.inera.se/ig/forms/)
 
 Source code and issue tracking are available on [GitHub](https://github.com/Inera-AB).

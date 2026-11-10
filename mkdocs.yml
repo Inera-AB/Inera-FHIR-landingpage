@@ -45,6 +45,7 @@ plugins:
           build: true
           nav_translations:
             Hem: Home
+            "Specifikationer (IG)": "Specifications (IGs)"
             "Ny på FHIR?": "New to FHIR?"
             "Vanliga frågor": FAQ
             Styrning: Governance
@@ -57,6 +58,7 @@ extra_javascript:
 
 nav:
   - Hem: index.md
+  - Specifikationer (IG): https://fhir.inera.se/ig/
   - Ny på FHIR?: assets/documents/NewToFHIR.md
   - Vanliga frågor: assets/documents/FAQ.md
   - Styrning: assets/documents/Governance.md
