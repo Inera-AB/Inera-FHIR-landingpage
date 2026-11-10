@@ -34,16 +34,18 @@ All Inera FHIR Implementation Guides are published at **[fhir.inera.se](https://
 https://fhir.inera.se/ig/<name>/
 ```
 
-For example: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
+For example: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/fastakontakter/`](https://fhir.inera.se/ig/fastakontakter/).
 
 ### Published Implementation Guides
 
 A complete and up-to-date listing of all published Inera FHIR Implementation Guides is available at **[fhir.inera.se/ig/](https://fhir.inera.se/ig/index.html)**. Currently published IGs include:
-- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/ehds-tk) - FHIR IG describing how Ineras RIVTA-speciofications for NPÖ och 1177 Journal map to FHIR.
 
-Work in progress includes: 
-- **[Inera CareTeam](https://fhir.inera.se/ig/fastvardkontakt/)** — Profiles for representing a patient's designated care contact (*fast vårdkontakt*) and care team. Used as the first FHIR profile in the 1177 Journal service.
-- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** — Profiles for `Questionnaire` and `QuestionnaireResponse` supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.
+- **[Inera EHDS Tjänstekontrakt](https://fhir.inera.se/ig/ehds-tk)** (*EHDS-bryggan*) — FHIR IG describing how Inera's RIVTA service contracts for NPÖ and the 1177 Journal are mapped to FHIR.
+
+Upcoming IGs are:
+
+- **[Fasta kontakter](https://fhir.inera.se/ig/fastakontakter/)** — Profiles for representing a patient's designated care contact (*fast vårdkontakt*) and care team. Used as the first FHIR profile in the 1177 Journal service.
+- **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** (*Formulärtjänsten*) — Profiles for `Questionnaire` and `QuestionnaireResponse` supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.
 
 ### Terminology Service
 

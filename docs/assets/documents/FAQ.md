@@ -11,7 +11,7 @@ Inera förvaltar den nationella digitala infrastrukturen för svensk hälso- och
 Alla Inera FHIR Implementation Guides publiceras på [fhir.inera.se](https://fhir.inera.se) enligt URL-mönstret `https://fhir.inera.se/ig/<namn>/`. Till exempel:
 
 - [fhir.inera.se/ig/core/](https://fhir.inera.se/ig/core/)
-- [fhir.inera.se/ig/careteam/](https://fhir.inera.se/ig/careteam/)
+- [fhir.inera.se/ig/fastakontakter/](https://fhir.inera.se/ig/fastakontakter/)
 - [fhir.inera.se/ig/forms/](https://fhir.inera.se/ig/forms/)
 
 Källkod och ärendehantering finns på [GitHub](https://github.com/Inera-AB).
