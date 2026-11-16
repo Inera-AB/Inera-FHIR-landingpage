@@ -1,0 +1,7 @@
+{#- Override Material's hardcoded alt="logo" with alt="" (decorative image inside aria-labeled link) -#}
+{% if config.theme.logo %}
+  <img src="{{ config.theme.logo | url }}" alt="" draggable="false">
+{% else %}
+  {% set icon = config.theme.icon.logo or "material/library" %}
+  {% include ".icons/" ~ icon ~ ".svg" %}
+{% endif %}

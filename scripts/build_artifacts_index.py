@@ -28,44 +28,44 @@ CANONICAL_ROOT = "https://fhir.inera.se/ig"
 
 # IG Publisher's grouping ids (gid) -> (category, subcategory)
 GROUPS = {
-    "-dyn-capabilitystatement": ("Behavior", "Capability Statements"),
-    "-dyn-searchparameter": ("Behavior", "Search Parameters"),
-    "-dyn-operationdefinition": ("Behavior", "Operation Definitions"),
-    "-dyn-subscriptiontopic": ("Behavior", "Subscription Topics"),
-    "-req-requirements": ("Requirements", "Requirements"),
-    "-req-actordefinition": ("Requirements", "Actor Definitions"),
-    "-str-profile": ("Structures", "Resource Profiles"),
-    "-str-extension": ("Structures", "Extension Definitions"),
-    "-str-logicalmodel": ("Structures", "Logical Models"),
-    "-term-codesystem": ("Terminology", "Code Systems"),
-    "-term-valueset": ("Terminology", "Value Sets"),
-    "-term-namingsystem": ("Terminology", "Naming Systems"),
-    "-map-conceptmap": ("Terminology", "Concept Maps"),
-    "-ex-example": ("Examples", "Example Instances"),
+    "-dyn-capabilitystatement": ("Beteende", "Förmågedeklarationer"),
+    "-dyn-searchparameter": ("Beteende", "Sökparametrar"),
+    "-dyn-operationdefinition": ("Beteende", "Operationsdefinitioner"),
+    "-dyn-subscriptiontopic": ("Beteende", "Prenumerationsämnen"),
+    "-req-requirements": ("Krav", "Formella krav"),
+    "-req-actordefinition": ("Krav", "Aktörsdefinitioner"),
+    "-str-profile": ("Strukturer", "Resursprofiler"),
+    "-str-extension": ("Strukturer", "Extensiondefinitioner"),
+    "-str-logicalmodel": ("Strukturer", "Logiska modeller"),
+    "-term-codesystem": ("Terminologi", "Kodsystem"),
+    "-term-valueset": ("Terminologi", "Värdemängder"),
+    "-term-namingsystem": ("Terminologi", "Namnsystem"),
+    "-map-conceptmap": ("Terminologi", "Konceptmappningar"),
+    "-ex-example": ("Exempel", "Exempelinstanser"),
 }
 
 # Category of a grouping id not in GROUPS, from its prefix
-PREFIXES = {"dyn": "Behavior", "req": "Requirements", "str": "Structures",
-            "term": "Terminology", "map": "Terminology", "ex": "Examples"}
+PREFIXES = {"dyn": "Beteende", "req": "Krav", "str": "Strukturer",
+            "term": "Terminologi", "map": "Terminologi", "ex": "Exempel"}
 
 # Resource type (and StructureDefinition kind) -> (category, subcategory), for
 # builds without artifacts-table-data.js
 TYPES = {
-    "StructureDefinition:resource": ("Structures", "Resource Profiles"),
-    "StructureDefinition:extension": ("Structures", "Extension Definitions"),
-    "StructureDefinition:logical": ("Structures", "Logical Models"),
-    "StructureDefinition:complex-type": ("Structures", "Data Type Profiles"),
-    "StructureDefinition:primitive-type": ("Structures", "Data Type Profiles"),
-    "CapabilityStatement": ("Behavior", "Capability Statements"),
-    "SearchParameter": ("Behavior", "Search Parameters"),
-    "OperationDefinition": ("Behavior", "Operation Definitions"),
-    "SubscriptionTopic": ("Behavior", "Subscription Topics"),
-    "Requirements": ("Requirements", "Requirements"),
-    "ActorDefinition": ("Requirements", "Actor Definitions"),
-    "CodeSystem": ("Terminology", "Code Systems"),
-    "ValueSet": ("Terminology", "Value Sets"),
-    "ConceptMap": ("Terminology", "Concept Maps"),
-    "NamingSystem": ("Terminology", "Naming Systems"),
+    "StructureDefinition:resource": ("Strukturer", "Resursprofiler"),
+    "StructureDefinition:extension": ("Strukturer", "Extensiondefinitioner"),
+    "StructureDefinition:logical": ("Strukturer", "Logiska modeller"),
+    "StructureDefinition:complex-type": ("Strukturer", "Datatypsprofiler"),
+    "StructureDefinition:primitive-type": ("Strukturer", "Datatypsprofiler"),
+    "CapabilityStatement": ("Beteende", "Förmågedeklarationer"),
+    "SearchParameter": ("Beteende", "Sökparametrar"),
+    "OperationDefinition": ("Beteende", "Operationsdefinitioner"),
+    "SubscriptionTopic": ("Beteende", "Prenumerationsämnen"),
+    "Krav": ("Krav", "Formella krav"),
+    "ActorDefinition": ("Krav", "Aktörsdefinitioner"),
+    "CodeSystem": ("Terminologi", "Kodsystem"),
+    "ValueSet": ("Terminologi", "Värdemängder"),
+    "ConceptMap": ("Terminologi", "Konceptmappningar"),
+    "NamingSystem": ("Terminologi", "Namnsystem"),
 }
 
 
@@ -108,7 +108,7 @@ def rows_from_table_data(base, text):
         else:
             # An IG-defined or new grouping: the category from the id's prefix,
             # the subcategory as the IG names it ("Kategori: Underkategori")
-            cat = PREFIXES.get(gid.lstrip("-").split("-")[0], "Other")
+            cat = PREFIXES.get(gid.lstrip("-").split("-")[0], "Övrigt")
             sub = r.get("g", "").split(": ", 1)[-1]
         rows.append({
             "c": cat,
@@ -131,9 +131,9 @@ def rows_from_ig_resource(base, ig):
         kind = next((e.get("valueString") for e in res.get("extension", [])
                      if e.get("url", "").endswith("/resource-information")), rtype)
         if res.get("exampleBoolean") or res.get("exampleCanonical") or res.get("isExample"):
-            cat, sub = "Examples", "Example Instances"
+            cat, sub = "Exempel", "Exempelinstanser"
         else:
-            cat, sub = TYPES.get(kind, TYPES.get(rtype, ("Other", rtype)))
+            cat, sub = TYPES.get(kind, TYPES.get(rtype, ("Övrigt", rtype)))
         rows.append({
             "c": cat,
             "s": sub,
