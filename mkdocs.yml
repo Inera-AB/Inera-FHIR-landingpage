@@ -26,6 +26,7 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Artifact search: artifacts/
   - New to FHIR?: assets/documents/NewToFHIR.md
   - FAQ: assets/documents/FAQ.md
   - Governance: assets/documents/Governance.md

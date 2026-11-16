@@ -36,6 +36,8 @@ https://fhir.inera.se/ig/<name>/
 
 For example: [`fhir.inera.se/ig/core/`](https://fhir.inera.se/ig/core/), [`fhir.inera.se/ig/careteam/`](https://fhir.inera.se/ig/careteam/).
 
+To find a profile, extension, value set or other artifact across all IGs and versions, use the [artifact search](artifacts/).
+
 Some profiles are shared across multiple standards. These are gathered in Inera's core profiles and reused in the service-specific IGs. Terminology — code systems, value sets and concept maps — is provided by Inera's national terminology server.
 
 The table below provides an overview of Inera's FHIR standards, divided into three parts:

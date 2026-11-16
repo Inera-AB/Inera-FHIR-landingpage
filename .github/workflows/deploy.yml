@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  # Rebuild the artifact index daily, so new IG versions and CI builds show up
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,5 +23,8 @@ jobs:
           python-version: '3.x'
 
       - run: pip install mkdocs-material
+
+      # The artifact index across all IGs (docs/artifacts/artifacts-data.json)
+      - run: python scripts/build_artifacts_index.py
 
       - run: mkdocs gh-deploy --force
