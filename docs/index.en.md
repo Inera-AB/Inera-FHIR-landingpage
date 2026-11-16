@@ -47,6 +47,8 @@ Upcoming IGs are:
 - **[Fasta kontakter](https://fhir.inera.se/ig/fastakontakter/)** — Profiles for representing a patient's designated care contact (*fast vårdkontakt*) and care team. Used as the first FHIR profile in the 1177 Journal service.
 - **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** (*Formulärtjänsten*) — Profiles for `Questionnaire` and `QuestionnaireResponse` supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.
 
+To find a profile, extension, value set or other artifact across all IGs and versions, use the **[artifact search](../artifacts/)**.
+
 ### Terminology Service
 
 **[Inera Terminologitjänst](https://test.api.terminologitjansten.inera.se)** (*Terminologitjänsten*) is Inera's national terminology server providing CodeSystems, ValueSets and concept lookups used across Swedish healthcare. It exposes a FHIR Terminology API.

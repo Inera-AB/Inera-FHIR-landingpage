@@ -47,6 +47,8 @@ Kommande IG:ar är:
 - **[Fasta kontakter](https://fhir.inera.se/ig/fastakontakter/)** — Profiler för att representera en patients utsedda vårdkontakt (*fast vårdkontakt*) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
 - **[Inera FHIR Forms](https://fhir.inera.se/ig/forms/)** (*Formulärtjänsten*) — Profiler för `Questionnaire` och `QuestionnaireResponse` som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.
 
+För att hitta en profil, ett tillägg, en värdemängd eller en annan artefakt i alla IG:ar och versioner, använd **[artefaktsöket](artifacts/)**.
+
 ### Terminologitjänsten
 
 **[Inera Terminologitjänst](https://test.api.terminologitjansten.inera.se)** är Ineras nationella terminologiserver som tillhandahåller kodsystem, värdemängder och begreppsslagningar för svensk hälso- och sjukvård. Den exponerar ett FHIR Terminology API.

@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  # Rebuild the artifact index daily, so new IG versions and CI builds show up
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,6 +24,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Build artifact index
+        run: python scripts/build_artifacts_index.py
 
       - name: Build site
         run: mkdocs build
