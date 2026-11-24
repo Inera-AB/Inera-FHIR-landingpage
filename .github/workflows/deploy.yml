@@ -31,10 +31,23 @@ jobs:
       - name: Build site
         run: mkdocs build
 
+      # Token from the organisation's GitHub App (organisation secrets
+      # FHIR_PORTAL_APP_ID and FHIR_PORTAL_APP_KEY). Valid for one hour.
+      # Falls back to the personal access token FHIR_PORTAL_TOKEN until the
+      # app secrets are available to this repo.
+      - name: Token for fhir-portal
+        id: web-token
+        uses: Inera-AB/fhir-ig-workflows/actions/web-token@v1
+        with:
+          repo: inera-ab/fhir-portal
+          app-id: ${{ secrets.FHIR_PORTAL_APP_ID }}
+          private-key: ${{ secrets.FHIR_PORTAL_APP_KEY }}
+          fallback-token: ${{ secrets.FHIR_PORTAL_TOKEN }}
+
       - name: Deploy to fhir-portal
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ secrets.FHIR_PORTAL_TOKEN }}
+          personal_token: ${{ steps.web-token.outputs.token }}
           external_repository: inera-ab/fhir-portal
           publish_branch: gh-pages
           publish_dir: ./site
